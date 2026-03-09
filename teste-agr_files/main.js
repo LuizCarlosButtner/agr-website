@@ -142,7 +142,7 @@ $(document).ready(function($) {
       preload: [0,1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
-      verticalFit: true
+      verticalFit: false
     },
     zoom: {
       enabled: true,
@@ -224,5 +224,44 @@ $(function() {
     return percentage / 100 * 360
 
   }
+
+  var heroBgSlider = function() {
+    var $hero = $('#home');
+    if (!$hero.length) {
+        return;
+    }
+
+    var images = [
+        'img/loop/img_01.jpg',
+        'img/loop/img_02.jpg',
+        'img/loop/img_03.jpg',
+        'img/loop/img_04.jpg',
+        'img/loop/img_05.jpg',
+        'img/loop/img_06.jpg',
+        'img/loop/img_07.jpg',
+        'img/loop/img_08.jpg',
+        // Adicione mais imagens da pasta img/loop aqui
+    ];
+    var currentIndex = 0;
+
+    $.each(images, function() {
+        $('<img/>')[0].src = this;
+    });
+
+    var $bg1 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
+    var $bg2 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
+
+    $bg1.css('background-image', 'url(' + images[currentIndex] + ')').addClass('active-bg');
+
+    setInterval(function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        var $currentBg = $hero.find('.active-bg');
+        var $nextBg = ($currentBg.is($bg1)) ? $bg2 : $bg1;
+        $nextBg.css('background-image', 'url(' + images[currentIndex] + ')');
+        $currentBg.removeClass('active-bg');
+        $nextBg.addClass('active-bg');
+    }, 10000); // 10 seconds
+  };
+  heroBgSlider();
 
 });
