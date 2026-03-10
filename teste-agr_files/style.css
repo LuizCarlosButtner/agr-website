@@ -1829,7 +1829,7 @@ strong {
         color: #fff;
         font-size: 100px; }
       .logo a img {
-      	width: 300px;
+      	width: 700px;
       }
       .slider-text .logo a small {
         display: block;
@@ -2510,3 +2510,24 @@ textarea.form-control {
   transition: opacity 1.5s ease-in-out; }
   .hero-bg-slider.active-bg {
     opacity: 1; }
+
+
+
+
+ 
+@media (min-width: 768px) {
+
+  .foto-down-10{
+    background-position: center 10% !important;
+  }
+  .foto-down-20{
+    background-position: center 20% !important;
+  }
+  .foto-down-30{
+    background-position: center 30% !important;
+  }
+  .foto-down-40{
+    background-position: center 40% !important;
+  }
+}
+  

@@ -1,11 +1,11 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
-
 $(document).ready(function($) {
 
 	"use strict";
+
+	AOS.init({
+		duration: 800,
+		easing: 'slide'
+	});
 
 	$(window).stellar({
     responsive: true,
@@ -160,11 +160,7 @@ $(document).ready(function($) {
     fixedContentPos: false
   });
 
-});
-
-
-$(function() {
-  
+  // Navigation
   var link = $('#navbar a.dot');
   
   // Move to specific section when click on menu link
@@ -197,10 +193,11 @@ $(function() {
     });
   }
   scrNav();
-});
 
-
-$(function() {
+  // Progress Bar
+  function percentageToDegrees(percentage) {
+    return percentage / 100 * 360
+  }
 
   $(".progress").each(function() {
 
@@ -217,14 +214,9 @@ $(function() {
       }
     }
 
-  })
+  });
 
-  function percentageToDegrees(percentage) {
-
-    return percentage / 100 * 360
-
-  }
-
+  // Hero Slider
   var heroBgSlider = function() {
     var $hero = $('#home');
     if (!$hero.length) {
@@ -250,8 +242,13 @@ $(function() {
 
     var $bg1 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
     var $bg2 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
+    var $bg1 = $('<div class="hero-bg-slider" data-stellar-background-ratio="0.5"></div>').prependTo($hero);
+    var $bg2 = $('<div class="hero-bg-slider" data-stellar-background-ratio="0.5"></div>').prependTo($hero);
 
     $bg1.css('background-image', 'url(' + images[currentIndex] + ')').addClass('active-bg');
+
+    // Recarrega o stellar para reconhecer os novos elementos com parallax
+    $(window).stellar('refresh');
 
     setInterval(function() {
         currentIndex = (currentIndex + 1) % images.length;
