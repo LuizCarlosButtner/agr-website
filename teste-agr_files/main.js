@@ -240,8 +240,6 @@ $(document).ready(function($) {
         $('<img/>')[0].src = this;
     });
 
-    var $bg1 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
-    var $bg2 = $('<div class="hero-bg-slider"></div>').prependTo($hero);
     var $bg1 = $('<div class="hero-bg-slider" data-stellar-background-ratio="0.5"></div>').prependTo($hero);
     var $bg2 = $('<div class="hero-bg-slider" data-stellar-background-ratio="0.5"></div>').prependTo($hero);
 
