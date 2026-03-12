@@ -2531,4 +2531,10 @@ textarea.form-control {
     background-position: center 40% !important;
   }
 }
+
+@media (max-width: 767px) {
+  .img-video img {
+    object-position: top !important;
+  }
+}
   
