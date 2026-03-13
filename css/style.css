@@ -2512,29 +2512,23 @@ textarea.form-control {
   .hero-bg-slider.active-bg {
     opacity: 1; }
 
+.foto-down-10 {
+  object-position: center 10% !important; }
+
+.foto-down-20 {
+  object-position: center 20% !important; }
+
+.foto-down-30 {
+  object-position: center 30% !important; }
+
+.foto-down-40 {
+  object-position: center 40% !important; }
+
+.img-video img,
+.foto-down-top {
+  object-position: top !important; }
 
 
 
- 
-@media (min-width: 768px) {
 
-  .foto-down-10{
-    background-position: center 10% !important;
-  }
-  .foto-down-20{
-    background-position: center 20% !important;
-  }
-  .foto-down-30{
-    background-position: center 30% !important;
-  }
-  .foto-down-40{
-    background-position: center 40% !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .img-video img {
-    object-position: top !important;
-  }
-}
   
