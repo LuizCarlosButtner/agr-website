@@ -280,3 +280,244 @@ $(document).ready(function($) {
   });
 
 });
+
+// =====================================================================
+// SCRIPT DA SECÇÃO PODCAST
+// =====================================================================
+const videoData = [
+    {
+        id: 1,
+        title: "Mundo GV -  JÚLIO CÉSAR",
+        category: "Videocast",
+        description: "O Mundo GV é um podcast de resenha esportiva comandado pelo ex-goleiro Getúlio Vargas. Neste episódio especial com o lendário Júlio César, acompanhe histórias exclusivas de bastidores gravadas com a máxima qualidade nos nossos estúdios.",
+        thumbnail: "https://i.ytimg.com/vi/JFjKsvHrG1Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDHON4iv0IqF6nsYvoDFcadFK9ECA",
+        youtubeId: "zrjy58ertaE",
+        startTime: 100
+    },
+    {
+        id: 2,
+        title: "Papagaio Falante com Sérgio Mallandro",
+        category: "Videocast",
+        description: "Sérgio Mallandro e Renato Rabelo recebem convidados icónicos num ambiente perfeito para a resenha e o humor.",
+        thumbnail: "https://i.ytimg.com/vi/curzpCATAuw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCdzC1b5HvhVEKCgvgNFCnOr8pISg",
+        youtubeId: "curzpCATAuw",
+        startTime: 9158
+    },
+    {
+        id: 3,
+        title: "Cheguei Podcast - Entrevista Inédita",
+        category: "Gravação de Podcast",
+        description: "Histórias incríveis e convidados de peso no Cheguei Podcast, captados com a máxima qualidade e conforto do nosso estúdio.",
+        thumbnail: "https://i.ytimg.com/vi/HAW6_OGNmSc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBFQrTKj5xLqqb9hVi01onnflXXag",
+        youtubeId: "FHqFbr1g0qs",
+        startTime: 5725
+    },
+    {
+        id: 4,
+        title: "Produção 'Bora de Premmia'",
+        category: "Produção Corporativa",
+        description: "Gravação de campanha publicitária e corporativa no nosso espaço, mostrando a versatilidade dos estúdios AGR.",
+        thumbnail: "https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&q=80&w=800&h=1000",
+        youtubeId: "dQw4w9WgXcQ",
+        startTime: 0
+    },
+    {
+        id: 5,
+        title: "ValiaCast - Live Streaming",
+        category: "Transmissão ao Vivo",
+        description: "Setup completo para o videocast corporativo ValiaCast, com iluminação profissional e corte de câmaras ao vivo.",
+        thumbnail: "https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?auto=format&fit=crop&q=80&w=800&h=1000",
+        youtubeId: "dQw4w9WgXcQ",
+        startTime: 0
+    },
+    {
+        id: 6,
+        title: "AGR Estúdios - O Nosso Espaço",
+        category: "Institucional",
+        description: "Um tour completo pelo nosso estúdio na Barra da Tijuca, RJ. Conheça a estrutura que acolhe os maiores podcasts do Brasil.",
+        thumbnail: "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&q=80&w=800&h=1000",
+        youtubeId: "dQw4w9WgXcQ",
+        startTime: 0
+    }
+];
+
+let currentSelectedVideo = null;
+let isSummarizing = false;
+
+const callGeminiAPI = async (prompt) => {
+    const apiKey = ""; // A chave API do Gemini vai aqui
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+    
+    const payload = {
+        contents: [{ parts: [{ text: prompt }] }],
+    };
+
+    const maxRetries = 5;
+    const delays = [1000, 2000, 4000, 8000, 16000];
+
+    for (let i = 0; i < maxRetries; i++) {
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            const data = await response.json();
+            return data.candidates[0].content.parts[0].text;
+        } catch (error) {
+            if (i === maxRetries - 1) throw error;
+            await new Promise(resolve => setTimeout(resolve, delays[i]));
+        }
+    }
+};
+
+function renderVideoGrid() {
+    const gridContainer = document.getElementById('video-grid');
+    if (!gridContainer) return;
+    
+    videoData.forEach(video => {
+        const videoEl = document.createElement('div');
+        videoEl.className = "group relative w-full h-[400px] md:h-[500px] overflow-hidden cursor-pointer bg-[#1f1f1f]";
+        videoEl.onclick = () => openModal(video.id);
+
+        videoEl.innerHTML = `
+            <img 
+                src="${video.thumbnail}" 
+                alt="${video.title}" 
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center transform scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 shadow-xl">
+                    <i class="ph-fill ph-play text-gray-800 text-2xl ml-1"></i>
+                </div>
+                <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <span class="text-[11px] font-bold tracking-widest text-[#00c3e3] uppercase block mb-2">
+                        ${video.category}
+                    </span>
+                    <h4 class="text-white text-xl md:text-2xl font-medium leading-tight">
+                        ${video.title}
+                    </h4>
+                </div>
+            </div>
+        `;
+        gridContainer.appendChild(videoEl);
+    });
+}
+
+function openModal(videoId) {
+    currentSelectedVideo = videoData.find(v => v.id === videoId);
+    if (!currentSelectedVideo) return;
+
+    // Montagem dinâmica da URL do YouTube
+    const baseUrl = "https://www.youtube.com/embed/";
+    let finalUrl = `${baseUrl}${currentSelectedVideo.youtubeId}?autoplay=1`;
+    
+    if (currentSelectedVideo.startTime && currentSelectedVideo.startTime > 0) {
+        finalUrl += `&start=${currentSelectedVideo.startTime}`;
+    }
+
+    document.getElementById('modal-iframe').src = finalUrl;
+    document.getElementById('modal-category').innerText = currentSelectedVideo.category;
+    document.getElementById('modal-title').innerText = currentSelectedVideo.title;
+    document.getElementById('modal-description').innerText = currentSelectedVideo.description;
+
+    resetSummaryState();
+
+    const modal = document.getElementById('video-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('video-modal');
+    if(!modal) return;
+    
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    
+    document.getElementById('modal-iframe').src = "";
+    currentSelectedVideo = null;
+    document.body.style.overflow = 'unset';
+}
+
+function resetSummaryState() {
+    isSummarizing = false;
+    document.getElementById('btn-generate-summary').classList.remove('hidden');
+    document.getElementById('summary-container').classList.add('hidden');
+    document.getElementById('btn-icon-sparkle').classList.remove('hidden');
+    document.getElementById('btn-icon-spinner').classList.add('hidden');
+    document.getElementById('btn-text').innerText = "Destaques da Produção (IA)";
+    document.getElementById('btn-generate-summary').disabled = false;
+    document.getElementById('summary-content').innerHTML = "";
+}
+
+async function handleGenerateSummary() {
+    if (!currentSelectedVideo || isSummarizing) return;
+    isSummarizing = true;
+    
+    document.getElementById('btn-generate-summary').disabled = true;
+    document.getElementById('btn-icon-sparkle').classList.add('hidden');
+    document.getElementById('btn-icon-spinner').classList.remove('hidden');
+    document.getElementById('btn-text').innerText = "A analisar gravação...";
+
+    const prompt = `
+        És um especialista em audiovisual da 'AGR Podcast Estúdios'.
+        Escreve um pequeno parágrafo apelativo e 3 pontos-chave (bullet points) sobre o vídeo "${currentSelectedVideo.title}" (Categoria: ${currentSelectedVideo.category}). 
+        Descrição: "${currentSelectedVideo.description}".
+        Destaca a excelência da gravação, som cristalino e estrutura de ponta da AGR.
+        Responde em Português de Portugal (pt-PT), usa formatação markdown (negritos, listas) sem títulos grandes (h1/h2).
+    `;
+
+    try {
+        const result = await callGeminiAPI(prompt);
+        displaySummary(result);
+    } catch (error) {
+        console.error("Erro ao gerar resumo:", error);
+        displaySummary("Não foi possível gerar os destaques neste momento. Tente novamente mais tarde.");
+    } finally {
+        isSummarizing = false;
+    }
+}
+
+function displaySummary(markdownText) {
+    const htmlContent = markdownText
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em class="text-gray-400">$1</em>')
+        .replace(/- (.*)/g, '<li>$1</li>');
+
+    document.getElementById('btn-generate-summary').classList.add('hidden');
+    document.getElementById('summary-container').classList.remove('hidden');
+    document.getElementById('summary-content').innerHTML = htmlContent;
+}
+
+// ==========================================
+// Lógica de Inicialização e Eventos Globais
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Renderizar a grelha assim que o DOM carregar
+    renderVideoGrid();
+
+    const modal = document.getElementById('video-modal');
+    
+    // 1. Fechar ao clicar fora (no background escuro)
+    if(modal) {
+        modal.addEventListener('click', function(event) {
+            // Verifica se o clique foi diretamente no fundo e não no conteúdo interno
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+    }
+
+    // 2. Fechar ao pressionar a tecla ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' || event.key === 'Esc') {
+            // Verifica se o modal existe e se está visível
+            if (modal && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        }
+    });
+});
