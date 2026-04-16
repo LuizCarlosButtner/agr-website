@@ -317,6 +317,7 @@ const videoData = [
         title: "Produção 'Bora de Premmia'",
         category: "Produção Corporativa",
         description: "Gravação de campanha publicitária e corporativa no nosso espaço, mostrando a versatilidade dos estúdios AGR.",
+        // "https://youtu.be/fu3ZGvdLdv8?si=k--Jl3ksH8IecYyu" digo defante
         thumbnail: "https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&q=80&w=800&h=1000",
         youtubeId: "dQw4w9WgXcQ",
         startTime: 0
