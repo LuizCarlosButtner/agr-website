@@ -1,125 +1,125 @@
-$(document).ready(function($) {
+$(document).ready(function ($) {
 
-	"use strict";
+  "use strict";
 
-	// loader
-	var loader = function() {
-		setTimeout(function() { 
-			if($('#ftco-loader').length > 0) {
-				$('#ftco-loader').removeClass('show');
-			}
-		}, 1);
-	};
-	loader();
-	var carousel = function() {
-		$('.carousel-testimony').owlCarousel({
-			center: true,
-			loop: true,
-			items:1,
-			margin: 30,
-			stagePadding: 0,
-			nav: false,
-			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
-			responsive:{
-				0:{
-					items: 1
-				},
-				600:{
-					items: 3
-				},
-				1000:{
-					items: 3
-				}
-			}
-		});
-	};
-	carousel();
+  // loader
+  var loader = function () {
+    setTimeout(function () {
+      if ($('#ftco-loader').length > 0) {
+        $('#ftco-loader').removeClass('show');
+      }
+    }, 1);
+  };
+  loader();
+  var carousel = function () {
+    $('.carousel-testimony').owlCarousel({
+      center: true,
+      loop: true,
+      items: 1,
+      margin: 30,
+      stagePadding: 0,
+      nav: false,
+      navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  };
+  carousel();
 
-	var fullHeight = function() {
+  var fullHeight = function () {
 
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
+    $('.js-fullheight').css('height', $(window).height());
+    $(window).resize(function () {
+      $('.js-fullheight').css('height', $(window).height());
+    });
 
-	};
-	fullHeight();
-	
-	var counter = function() {
-		
-		$('#section-counter, .ftco-about').waypoint( function( direction ) {
+  };
+  fullHeight();
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+  var counter = function () {
 
-				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-				$('.number').each(function(){
-					var $this = $(this),
-						num = $this.data('number');
-					$this.animateNumber(
-					  {
-					    number: num,
-					    numberStep: comma_separator_number_step
-					  }, 7000
-					);
-				});
-				$(this.element).addClass('ftco-animated');
-				
-			}
+    $('#section-counter, .ftco-about').waypoint(function (direction) {
 
-		} , { offset: '95%' } );
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
 
-	}
-	counter();
+        var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+        $('.number').each(function () {
+          var $this = $(this),
+            num = $this.data('number');
+          $this.animateNumber(
+            {
+              number: num,
+              numberStep: comma_separator_number_step
+            }, 7000
+          );
+        });
+        $(this.element).addClass('ftco-animated');
 
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.ftco-animate').waypoint( function( direction ) {
+      }
 
-			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-				
-				i++;
+    }, { offset: '95%' });
 
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
+  }
+  counter();
 
-					$('body .ftco-animate.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn ftco-animated');
-							} else if ( effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft ftco-animated');
-							} else if ( effect === 'fadeInRight') {
-								el.addClass('fadeInRight ftco-animated');
-							} else {
-								el.addClass('fadeInUp ftco-animated');
-							}
-							el.removeClass('item-animate');
-						},  k * 50, 'easeInOutExpo' );
-					});
-					
-				}, 100);
-				
-			}
+  var contentWayPoint = function () {
+    var i = 0;
+    $('.ftco-animate').waypoint(function (direction) {
 
-		} , { offset: '95%' } );
-	};
-	contentWayPoint();
+      if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+
+        i++;
+
+        $(this.element).addClass('item-animate');
+        setTimeout(function () {
+
+          $('body .ftco-animate.item-animate').each(function (k) {
+            var el = $(this);
+            setTimeout(function () {
+              var effect = el.data('animate-effect');
+              if (effect === 'fadeIn') {
+                el.addClass('fadeIn ftco-animated');
+              } else if (effect === 'fadeInLeft') {
+                el.addClass('fadeInLeft ftco-animated');
+              } else if (effect === 'fadeInRight') {
+                el.addClass('fadeInRight ftco-animated');
+              } else {
+                el.addClass('fadeInUp ftco-animated');
+              }
+              el.removeClass('item-animate');
+            }, k * 50, 'easeInOutExpo');
+          });
+
+        }, 100);
+
+      }
+
+    }, { offset: '95%' });
+  };
+  contentWayPoint();
 
 
 
-	// magnific popup
-	$('.image-popup').magnificPopup({
+  // magnific popup
+  $('.image-popup').magnificPopup({
     type: 'image',
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
     mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
+    gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
     },
     image: {
       verticalFit: false
@@ -142,9 +142,9 @@ $(document).ready(function($) {
 
   // Navigation
   var link = $('#navbar a.dot');
-  
+
   // Move to specific section when click on menu link
-  link.on('click', function(e) {
+  link.on('click', function (e) {
     var target = $($(this).attr('href'));
     $('html, body').animate({
       scrollTop: target.offset().top
@@ -152,21 +152,21 @@ $(document).ready(function($) {
     $(this).addClass('active');
     e.preventDefault();
   });
-  
+
   // Run the scrNav when scroll
-  $(window).on('scroll', function(){
+  $(window).on('scroll', function () {
     scrNav();
   });
-  
+
   // scrNav function 
   // Change active dot according to the active section in the window
   function scrNav() {
     var sTop = $(window).scrollTop();
-    $('section').each(function() {
+    $('section').each(function () {
       var id = $(this).attr('id'),
-          offset = $(this).offset().top-1,
-          height = $(this).height();
-      if(sTop >= offset && sTop < offset + height) {
+        offset = $(this).offset().top - 1,
+        height = $(this).height();
+      if (sTop >= offset && sTop < offset + height) {
         link.removeClass('active');
         $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
       }
@@ -175,23 +175,23 @@ $(document).ready(function($) {
   scrNav();
 
   // Progress Bar animacao de rotacao 100% - 360 graus
-  var progressAnimation = function() {
+  var progressAnimation = function () {
     var $progressCircle = $('.progress-circle');
-    if($progressCircle.length > 0) {
-      $progressCircle.waypoint(function(direction) {
-      
-        if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-          
-          $(".progress").each(function() {
+    if ($progressCircle.length > 0) {
+      $progressCircle.waypoint(function (direction) {
+
+        if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+
+          $(".progress").each(function () {
             var $this = $(this);
             var value = $this.attr('data-value');
             var left = $this.find('.progress-left .progress-bar');
             var right = $this.find('.progress-right .progress-bar');
-            
+
             if (value > 0) {
-              $({count: 0}).animate({count: value}, {
+              $({ count: 0 }).animate({ count: value }, {
                 duration: 3000,
-                step: function() {
+                step: function () {
                   var degree = this.count / 100 * 360;
                   if (this.count <= 50) {
                     right.css('transform', 'rotate(' + degree + 'deg)');
@@ -201,7 +201,7 @@ $(document).ready(function($) {
                     left.css('transform', 'rotate(' + (degree - 180) + 'deg)');
                   }
                 },
-                complete: function() {
+                complete: function () {
                   // Força o estado final para garantir que o círculo se feche perfeitamente
                   var final_degree = parseFloat(value) / 100 * 360;
                   if (value > 50) {
@@ -222,27 +222,27 @@ $(document).ready(function($) {
   progressAnimation();
 
   // Hero Slider
-  var heroBgSlider = function() {
+  var heroBgSlider = function () {
     var $hero = $('#home');
     if (!$hero.length) {
-        return;
+      return;
     }
 
     var images = [
-        'img/loop/img_01.jpg',
-        'img/loop/img_02.jpg',
-        'img/loop/img_03.jpg',
-        'img/loop/img_04.jpg',
-        'img/loop/img_05.jpg',
-        'img/loop/img_06.jpg',
-        'img/loop/img_07.jpg',
-        'img/loop/img_08.jpg',
-        // Adicione mais imagens da pasta img/loop aqui
+      'img/loop/img_01.jpg',
+      'img/loop/img_02.jpg',
+      'img/loop/img_03.jpg',
+      'img/loop/img_04.jpg',
+      'img/loop/img_05.jpg',
+      'img/loop/img_06.jpg',
+      'img/loop/img_07.jpg',
+      'img/loop/img_08.jpg',
+      // Adicione mais imagens da pasta img/loop aqui
     ];
     var currentIndex = 0;
 
-    $.each(images, function() {
-        $('<img/>')[0].src = this;
+    $.each(images, function () {
+      $('<img/>')[0].src = this;
     });
 
     var $bg1 = $('<div class="hero-bg-slider" data-stellar-background-ratio="0.5"></div>').prependTo($hero);
@@ -251,32 +251,32 @@ $(document).ready(function($) {
     $bg1.css('background-image', 'url(' + images[currentIndex] + ')').addClass('active-bg');
 
     // Recarrega o stellar para reconhecer os novos elementos com parallax
-    setTimeout(function() {
-        $(window).stellar('refresh');
+    setTimeout(function () {
+      $(window).stellar('refresh');
     }, 100);
 
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % images.length;
-        var $currentBg = $hero.find('.active-bg');
-        var $nextBg = ($currentBg.is($bg1)) ? $bg2 : $bg1;
-        $nextBg.css('background-image', 'url(' + images[currentIndex] + ')');
-        $currentBg.removeClass('active-bg');
-        $nextBg.addClass('active-bg');
+    setInterval(function () {
+      currentIndex = (currentIndex + 1) % images.length;
+      var $currentBg = $hero.find('.active-bg');
+      var $nextBg = ($currentBg.is($bg1)) ? $bg2 : $bg1;
+      $nextBg.css('background-image', 'url(' + images[currentIndex] + ')');
+      $currentBg.removeClass('active-bg');
+      $nextBg.addClass('active-bg');
     }, 10000); // 10 seconds
   };
   heroBgSlider();
 
   // Garante que o parallax funcione mesmo se as imagens demorarem a carregar
-  $(window).on('load', function() {
-      $(window).stellar('refresh');
-      $(window).stellar({
-        responsive: true,
-        parallaxBackgrounds: true,
-        parallaxElements: true,
-        horizontalScrolling: false,
-        hideDistantElements: false,
-        scrollProperty: 'scroll'
-      });
+  $(window).on('load', function () {
+    $(window).stellar('refresh');
+    $(window).stellar({
+      responsive: true,
+      parallaxBackgrounds: true,
+      parallaxElements: true,
+      horizontalScrolling: false,
+      hideDistantElements: false,
+      scrollProperty: 'scroll'
+    });
   });
 
 });
@@ -285,104 +285,103 @@ $(document).ready(function($) {
 // SCRIPT DA SECÇÃO PODCAST
 // =====================================================================
 const videoData = [
-    {
-        id: 1,
-        title: "Mundo GV -  JÚLIO CÉSAR",
-        category: "Videocast",
-        description: "O Mundo GV é um podcast de resenha esportiva comandado pelo ex-goleiro Getúlio Vargas. Neste episódio especial com o lendário Júlio César, acompanhe histórias exclusivas de bastidores gravadas com a máxima qualidade nos nossos estúdios.",
-        thumbnail: "https://i.ytimg.com/vi/JFjKsvHrG1Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDHON4iv0IqF6nsYvoDFcadFK9ECA",
-        youtubeId: "zrjy58ertaE",
-        startTime: 100
-    },
-    {
-        id: 2,
-        title: "Papagaio Falante com Sérgio Mallandro",
-        category: "Videocast",
-        description: "Sérgio Mallandro e Renato Rabelo recebem convidados icónicos num ambiente perfeito para a resenha e o humor.",
-        thumbnail: "https://i.ytimg.com/vi/curzpCATAuw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCdzC1b5HvhVEKCgvgNFCnOr8pISg",
-        youtubeId: "curzpCATAuw",
-        startTime: 9158
-    },
-    {
-        id: 3,
-        title: "Cheguei Podcast - Entrevista Inédita",
-        category: "Gravação de Podcast",
-        description: "Histórias incríveis e convidados de peso no Cheguei Podcast, captados com a máxima qualidade e conforto do nosso estúdio.",
-        thumbnail: "https://i.ytimg.com/vi/HAW6_OGNmSc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBFQrTKj5xLqqb9hVi01onnflXXag",
-        youtubeId: "FHqFbr1g0qs",
-        startTime: 5725
-    },
-    {
-        id: 4,
-        title: "Produção 'Bora de Premmia'",
-        category: "Produção Corporativa",
-        description: "Gravação de campanha publicitária e corporativa no nosso espaço, mostrando a versatilidade dos estúdios AGR.",
-        // "https://youtu.be/fu3ZGvdLdv8?si=k--Jl3ksH8IecYyu" digo defante
-        thumbnail: "https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&q=80&w=800&h=1000",
-        youtubeId: "fu3ZGvdLdv8",
-        startTime: 0
-    },
-    {
-        id: 5,
-        title: "ValiaCast - Live Streaming",
-        category: "Transmissão ao Vivo",
-        description: "Setup completo para o videocast corporativo ValiaCast, com iluminação profissional e corte de câmaras ao vivo.",
-        thumbnail: "https://images.unsplash.com/photo-1598550880863-4e8aa3d0edb4?auto=format&fit=crop&q=80&w=800&h=1000",
-        youtubeId: "dQw4w9WgXcQ",
-        startTime: 0
-    },
-    {
-        id: 6,
-        title: "AGR Estúdios - O Nosso Espaço",
-        category: "Institucional",
-        description: "Um tour completo pelo nosso estúdio na Barra da Tijuca, RJ. Conheça a estrutura que acolhe os maiores podcasts do Brasil.",
-        thumbnail: "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?auto=format&fit=crop&q=80&w=800&h=1000",
-        youtubeId: "dQw4w9WgXcQ",
-        startTime: 0
-    }
+  {
+    id: 1,
+    title: "Mundo GV -  JÚLIO CÉSAR",
+    category: "Videocast",
+    description: "O Mundo GV é um podcast de resenha esportiva comandado pelo ex-goleiro Getúlio Vargas. Neste episódio especial com o lendário Júlio César, acompanhe histórias exclusivas de bastidores gravadas com a máxima qualidade nos nossos estúdios.",
+    thumbnail: "https://i.ytimg.com/vi/JFjKsvHrG1Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDHON4iv0IqF6nsYvoDFcadFK9ECA",
+    youtubeId: "zrjy58ertaE",
+    startTime: 100
+  },
+  {
+    id: 2,
+    title: "Papagaio Falante com Sérgio Mallandro",
+    category: "Videocast",
+    description: "Sérgio Mallandro e Renato Rabelo recebem convidados icónicos num ambiente perfeito para a resenha e o humor.",
+    thumbnail: "https://i.ytimg.com/vi/curzpCATAuw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCdzC1b5HvhVEKCgvgNFCnOr8pISg",
+    youtubeId: "curzpCATAuw",
+    startTime: 9158
+  },
+  {
+    id: 3,
+    title: "Cheguei Podcast - Entrevista Inédita",
+    category: "Gravação de Podcast",
+    description: "Histórias incríveis e convidados de peso no Cheguei Podcast, captados com a máxima qualidade e conforto do nosso estúdio.",
+    thumbnail: "https://i.ytimg.com/vi/HAW6_OGNmSc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBFQrTKj5xLqqb9hVi01onnflXXag",
+    youtubeId: "FHqFbr1g0qs",
+    startTime: 5725
+  },
+  {
+    id: 4,
+    title: "Aloha Podcast",
+    category: "Videocast",
+    description: "Episódio do Aloha Podcast captado com a máxima qualidade e conforto dos nossos estúdios.",
+    thumbnail: "https://i.ytimg.com/vi/QexZDxIEVnQ/hqdefault.jpg",
+    youtubeId: "QexZDxIEVnQ",
+    startTime: 120
+  },
+  {
+    id: 5,
+    title: "Tom Cavalcante",
+    category: "Videocast",
+    description: "Gravação com Tom Cavalcante, mostrando a excelência e versatilidade dos estúdios AGR.",
+    thumbnail: "https://i.ytimg.com/vi/3ElSzCMySrE/hqdefault.jpg",
+    youtubeId: "3ElSzCMySrE",
+    startTime: 120
+  },
+  {
+    id: 6,
+    title: "Docshow e Jojo Todynho",
+    category: "Videocast",
+    description: "Mais um super bate-papo no Docshow com Jojo Todynho no nosso espaço na Barra da Tijuca.",
+    thumbnail: "https://i.ytimg.com/vi/9CiwZIyk4bY/hqdefault.jpg",
+    youtubeId: "9CiwZIyk4bY",
+    startTime: 120
+  }
 ];
 
 let currentSelectedVideo = null;
 let isSummarizing = false;
 
 const callGeminiAPI = async (prompt) => {
-    const apiKey = ""; // A chave API do Gemini vai aqui
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
-    
-    const payload = {
-        contents: [{ parts: [{ text: prompt }] }],
-    };
+  const apiKey = ""; // A chave API do Gemini vai aqui
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
-    const maxRetries = 5;
-    const delays = [1000, 2000, 4000, 8000, 16000];
+  const payload = {
+    contents: [{ parts: [{ text: prompt }] }],
+  };
 
-    for (let i = 0; i < maxRetries; i++) {
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            const data = await response.json();
-            return data.candidates[0].content.parts[0].text;
-        } catch (error) {
-            if (i === maxRetries - 1) throw error;
-            await new Promise(resolve => setTimeout(resolve, delays[i]));
-        }
+  const maxRetries = 5;
+  const delays = [1000, 2000, 4000, 8000, 16000];
+
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const data = await response.json();
+      return data.candidates[0].content.parts[0].text;
+    } catch (error) {
+      if (i === maxRetries - 1) throw error;
+      await new Promise(resolve => setTimeout(resolve, delays[i]));
     }
+  }
 };
 
 function renderVideoGrid() {
-    const gridContainer = document.getElementById('video-grid');
-    if (!gridContainer) return;
-    
-    videoData.forEach(video => {
-        const videoEl = document.createElement('div');
-        videoEl.className = "group relative w-full h-[400px] md:h-[500px] overflow-hidden cursor-pointer bg-[#1f1f1f]";
-        videoEl.onclick = () => openModal(video.id);
+  const gridContainer = document.getElementById('video-grid');
+  if (!gridContainer) return;
 
-        videoEl.innerHTML = `
+  videoData.forEach(video => {
+    const videoEl = document.createElement('div');
+    videoEl.className = "group relative w-full aspect-video overflow-hidden cursor-pointer bg-[#1f1f1f]";
+    videoEl.onclick = () => openModal(video.id);
+
+    videoEl.innerHTML = `
             <img 
                 src="${video.thumbnail}" 
                 alt="${video.title}" 
@@ -402,74 +401,74 @@ function renderVideoGrid() {
                 </div>
             </div>
         `;
-        gridContainer.appendChild(videoEl);
-    });
+    gridContainer.appendChild(videoEl);
+  });
 }
 
 function openModal(videoId) {
-    currentSelectedVideo = videoData.find(v => v.id === videoId);
-    if (!currentSelectedVideo) return;
+  currentSelectedVideo = videoData.find(v => v.id === videoId);
+  if (!currentSelectedVideo) return;
 
-    // Montagem dinâmica da URL do YouTube
-    const baseUrl = "https://www.youtube.com/embed/";
-    let finalUrl = `${baseUrl}${currentSelectedVideo.youtubeId}?autoplay=1`;
-    
-    if (currentSelectedVideo.sourceId) {
-        finalUrl += `&si=${currentSelectedVideo.sourceId}`;
-    }
+  // Montagem dinâmica da URL do YouTube
+  const baseUrl = "https://www.youtube.com/embed/";
+  let finalUrl = `${baseUrl}${currentSelectedVideo.youtubeId}?autoplay=1`;
 
-    if (currentSelectedVideo.startTime && currentSelectedVideo.startTime > 0) {
-        finalUrl += `&start=${currentSelectedVideo.startTime}`;
-    }
+  if (currentSelectedVideo.sourceId) {
+    finalUrl += `&si=${currentSelectedVideo.sourceId}`;
+  }
 
-    console.log("URL DO IFRAME GERADA:", finalUrl);
+  if (currentSelectedVideo.startTime && currentSelectedVideo.startTime > 0) {
+    finalUrl += `&start=${currentSelectedVideo.startTime}`;
+  }
 
-    document.getElementById('modal-iframe').src = finalUrl;
-    document.getElementById('modal-category').innerText = currentSelectedVideo.category;
-    document.getElementById('modal-title').innerText = currentSelectedVideo.title;
-    document.getElementById('modal-description').innerText = currentSelectedVideo.description;
+  console.log("URL DO IFRAME GERADA:", finalUrl);
 
-    resetSummaryState();
+  document.getElementById('modal-iframe').src = finalUrl;
+  document.getElementById('modal-category').innerText = currentSelectedVideo.category;
+  document.getElementById('modal-title').innerText = currentSelectedVideo.title;
+  document.getElementById('modal-description').innerText = currentSelectedVideo.description;
 
-    const modal = document.getElementById('video-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.body.style.overflow = 'hidden';
+  resetSummaryState();
+
+  const modal = document.getElementById('video-modal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModal() {
-    const modal = document.getElementById('video-modal');
-    if(!modal) return;
-    
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-    
-    document.getElementById('modal-iframe').src = "";
-    currentSelectedVideo = null;
-    document.body.style.overflow = 'unset';
+  const modal = document.getElementById('video-modal');
+  if (!modal) return;
+
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+
+  document.getElementById('modal-iframe').src = "";
+  currentSelectedVideo = null;
+  document.body.style.overflow = 'unset';
 }
 
 function resetSummaryState() {
-    isSummarizing = false;
-    document.getElementById('btn-generate-summary').classList.remove('hidden');
-    document.getElementById('summary-container').classList.add('hidden');
-    document.getElementById('btn-icon-sparkle').classList.remove('hidden');
-    document.getElementById('btn-icon-spinner').classList.add('hidden');
-    document.getElementById('btn-text').innerText = "Destaques da Produção (IA)";
-    document.getElementById('btn-generate-summary').disabled = false;
-    document.getElementById('summary-content').innerHTML = "";
+  isSummarizing = false;
+  document.getElementById('btn-generate-summary').classList.remove('hidden');
+  document.getElementById('summary-container').classList.add('hidden');
+  document.getElementById('btn-icon-sparkle').classList.remove('hidden');
+  document.getElementById('btn-icon-spinner').classList.add('hidden');
+  document.getElementById('btn-text').innerText = "Destaques da Produção (IA)";
+  document.getElementById('btn-generate-summary').disabled = false;
+  document.getElementById('summary-content').innerHTML = "";
 }
 
 async function handleGenerateSummary() {
-    if (!currentSelectedVideo || isSummarizing) return;
-    isSummarizing = true;
-    
-    document.getElementById('btn-generate-summary').disabled = true;
-    document.getElementById('btn-icon-sparkle').classList.add('hidden');
-    document.getElementById('btn-icon-spinner').classList.remove('hidden');
-    document.getElementById('btn-text').innerText = "A analisar gravação...";
+  if (!currentSelectedVideo || isSummarizing) return;
+  isSummarizing = true;
 
-    const prompt = `
+  document.getElementById('btn-generate-summary').disabled = true;
+  document.getElementById('btn-icon-sparkle').classList.add('hidden');
+  document.getElementById('btn-icon-spinner').classList.remove('hidden');
+  document.getElementById('btn-text').innerText = "A analisar gravação...";
+
+  const prompt = `
         És um especialista em audiovisual da 'AGR Podcast Estúdios'.
         Escreve um pequeno parágrafo apelativo e 3 pontos-chave (bullet points) sobre o vídeo "${currentSelectedVideo.title}" (Categoria: ${currentSelectedVideo.category}). 
         Descrição: "${currentSelectedVideo.description}".
@@ -477,54 +476,54 @@ async function handleGenerateSummary() {
         Responde em Português de Portugal (pt-PT), usa formatação markdown (negritos, listas) sem títulos grandes (h1/h2).
     `;
 
-    try {
-        const result = await callGeminiAPI(prompt);
-        displaySummary(result);
-    } catch (error) {
-        console.error("Erro ao gerar resumo:", error);
-        displaySummary("Não foi possível gerar os destaques neste momento. Tente novamente mais tarde.");
-    } finally {
-        isSummarizing = false;
-    }
+  try {
+    const result = await callGeminiAPI(prompt);
+    displaySummary(result);
+  } catch (error) {
+    console.error("Erro ao gerar resumo:", error);
+    displaySummary("Não foi possível gerar os destaques neste momento. Tente novamente mais tarde.");
+  } finally {
+    isSummarizing = false;
+  }
 }
 
 function displaySummary(markdownText) {
-    const htmlContent = markdownText
-        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\*(.*?)\*/g, '<em class="text-gray-400">$1</em>')
-        .replace(/- (.*)/g, '<li>$1</li>');
+  const htmlContent = markdownText
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g, '<em class="text-gray-400">$1</em>')
+    .replace(/- (.*)/g, '<li>$1</li>');
 
-    document.getElementById('btn-generate-summary').classList.add('hidden');
-    document.getElementById('summary-container').classList.remove('hidden');
-    document.getElementById('summary-content').innerHTML = htmlContent;
+  document.getElementById('btn-generate-summary').classList.add('hidden');
+  document.getElementById('summary-container').classList.remove('hidden');
+  document.getElementById('summary-content').innerHTML = htmlContent;
 }
 
 // ==========================================
 // Lógica de Inicialização e Eventos Globais
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
-    // Renderizar a grelha assim que o DOM carregar
-    renderVideoGrid();
+  // Renderizar a grelha assim que o DOM carregar
+  renderVideoGrid();
 
-    const modal = document.getElementById('video-modal');
-    
-    // 1. Fechar ao clicar fora (no background escuro)
-    if(modal) {
-        modal.addEventListener('click', function(event) {
-            // Verifica se o clique foi diretamente no fundo e não no conteúdo interno
-            if (event.target === this) {
-                closeModal();
-            }
-        });
-    }
+  const modal = document.getElementById('video-modal');
 
-    // 2. Fechar ao pressionar a tecla ESC
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' || event.key === 'Esc') {
-            // Verifica se o modal existe e se está visível
-            if (modal && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
-        }
+  // 1. Fechar ao clicar fora (no background escuro)
+  if (modal) {
+    modal.addEventListener('click', function (event) {
+      // Verifica se o clique foi diretamente no fundo e não no conteúdo interno
+      if (event.target === this) {
+        closeModal();
+      }
     });
+  }
+
+  // 2. Fechar ao pressionar a tecla ESC
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      // Verifica se o modal existe e se está visível
+      if (modal && !modal.classList.contains('hidden')) {
+        closeModal();
+      }
+    }
+  });
 });
