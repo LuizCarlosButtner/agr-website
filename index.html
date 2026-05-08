@@ -123,7 +123,7 @@
     			<div class="col-md-6 col-lg-6 d-flex">
     				<div class="img-about img d-flex align-items-stretch">
     					<div class="overlay"></div>
-	    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center" style="position: relative; overflow: hidden;">
+	    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center cursor-pointer" style="position: relative; overflow: hidden;" onclick="openAboutVideo()">
 							<picture>
 								<img
 									sizes="(max-width: 1400px) 100vw, 1400px"
@@ -759,6 +759,27 @@
 		</footer>
 		<!-- End Footer Section -->
    
+	<!-- Modal do Vídeo Sobre -->
+	<div id="about-video-modal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+		<button 
+			onclick="closeAboutVideo()"
+			class="absolute top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-white bg-[#1f1f1f] hover:bg-[#333] p-3 rounded-full transition-colors z-[110] shadow-lg"
+			aria-label="Fechar vídeo"
+		>
+			<i class="ph ph-x text-2xl"></i>
+		</button>
+		<div class="w-full max-w-4xl mx-auto flex flex-col gap-6 fade-in relative z-[100]">
+			<div class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a]">
+				<video id="about-video-player" controls class="w-full h-full outline-none">
+					<source src="media/Premmia fedd.mp4" type="video/mp4">
+					Seu navegador não suporta o elemento de vídeo.
+				</video>
+			</div>
+		</div>
+	</div>
+
+    <script src="js/about-video.js"></script>
+
 
     <!-- loader -->
     <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>

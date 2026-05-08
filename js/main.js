@@ -319,7 +319,7 @@ const videoData = [
         description: "Gravação de campanha publicitária e corporativa no nosso espaço, mostrando a versatilidade dos estúdios AGR.",
         // "https://youtu.be/fu3ZGvdLdv8?si=k--Jl3ksH8IecYyu" digo defante
         thumbnail: "https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?auto=format&fit=crop&q=80&w=800&h=1000",
-        youtubeId: "dQw4w9WgXcQ",
+        youtubeId: "fu3ZGvdLdv8",
         startTime: 0
     },
     {
@@ -414,9 +414,15 @@ function openModal(videoId) {
     const baseUrl = "https://www.youtube.com/embed/";
     let finalUrl = `${baseUrl}${currentSelectedVideo.youtubeId}?autoplay=1`;
     
+    if (currentSelectedVideo.sourceId) {
+        finalUrl += `&si=${currentSelectedVideo.sourceId}`;
+    }
+
     if (currentSelectedVideo.startTime && currentSelectedVideo.startTime > 0) {
         finalUrl += `&start=${currentSelectedVideo.startTime}`;
     }
+
+    console.log("URL DO IFRAME GERADA:", finalUrl);
 
     document.getElementById('modal-iframe').src = finalUrl;
     document.getElementById('modal-category').innerText = currentSelectedVideo.category;
