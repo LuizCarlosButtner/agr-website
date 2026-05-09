@@ -5,17 +5,17 @@
 	<title>AGR Podcast Estúdios</title>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="img/logo/Destaque-Logo.ico">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?v=20260508">
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-thin-straight/css/uicons-thin-straight.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="css/css.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link href="css/css.css?v=20260508" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css?v=20260508">
+	<link rel="stylesheet" href="css/owl.carousel.min.css?v=20260508">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css?v=20260508">
+	<link rel="stylesheet" href="css/magnific-popup.css?v=20260508">
+	<link rel="stylesheet" href="css/ionicons.min.css?v=20260508">
 
 	<!-- Tailwind CSS e Phosphor Icons -->
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +34,11 @@
 		@keyframes slideUp {
 			from { transform: translateY(16px); opacity: 0; }
 			to { transform: translateY(0); opacity: 1; }
+		}
+
+		@keyframes spin {
+			from { transform: rotate(0deg); }
+			to { transform: rotate(360deg); }
 		}
 
 		.prose-custom p { margin-bottom: 0.75rem; line-height: 1.6; }
@@ -363,6 +368,13 @@
 						
 						<!-- Player -->
 						<div class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a] mb-6">
+							<!-- Spinner de loading -->
+							<div id="video-loader" class="absolute inset-0 z-10 flex items-center justify-center bg-black">
+								<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation: spin 0.9s linear infinite;">
+									<circle cx="28" cy="28" r="22" stroke="#2a2a2a" stroke-width="4"/>
+									<path d="M28 6 A22 22 0 0 1 50 28" stroke="#00c3e3" stroke-width="4" stroke-linecap="round"/>
+								</svg>
+							</div>
 							<iframe
 								id="modal-iframe"
 								src=""
@@ -778,22 +790,22 @@
 		</div>
 	</div>
 
-    <script src="js/about-video.js"></script>
+    <script src="js/about-video.js?v=20260508"></script>
 
 
     <!-- loader -->
     <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>
 
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.min.js?v=20260508"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js?v=20260508"></script>
+    <script src="js/jquery.easing.1.3.js?v=20260508"></script>
+    <script src="js/jquery.waypoints.min.js?v=20260508"></script>
+    <script src="js/jquery.stellar.min.js?v=20260508"></script>
+    <script src="js/owl.carousel.min.js?v=20260508"></script>
+    <script src="js/jquery.magnific-popup.min.js?v=20260508"></script>
+    <script src="js/jquery.animateNumber.min.js?v=20260508"></script>
+    <script src="js/main.js?v=20260508"></script>
 
 </body>
 </html>

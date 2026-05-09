@@ -287,12 +287,12 @@ $(document).ready(function ($) {
 const videoData = [
   {
     id: 1,
-    title: "Mundo GV -  JÚLIO CÉSAR",
+    title: "Bebeto 07 e Zico",
     category: "Videocast",
-    description: "O Mundo GV é um podcast de resenha esportiva comandado pelo ex-goleiro Getúlio Vargas. Neste episódio especial com o lendário Júlio César, acompanhe histórias exclusivas de bastidores gravadas com a máxima qualidade nos nossos estúdios.",
-    thumbnail: "https://i.ytimg.com/vi/JFjKsvHrG1Y/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDHON4iv0IqF6nsYvoDFcadFK9ECA",
-    youtubeId: "zrjy58ertaE",
-    startTime: 100
+    description: "Bebeto 07 e Zico. Um bate-papo histórico gravado com a máxima qualidade nos nossos estúdios na Barra da Tijuca.",
+    thumbnail: "https://i.ytimg.com/vi/MXZyq5eeeGA/hq720.jpg",
+    youtubeId: "MXZyq5eeeGA",
+    startTime: 5563
   },
   {
     id: 2,
@@ -319,7 +319,7 @@ const videoData = [
     description: "Episódio do Aloha Podcast captado com a máxima qualidade e conforto dos nossos estúdios.",
     thumbnail: "https://i.ytimg.com/vi/QexZDxIEVnQ/hqdefault.jpg",
     youtubeId: "QexZDxIEVnQ",
-    startTime: 120
+    startTime: 5191
   },
   {
     id: 5,
@@ -328,7 +328,7 @@ const videoData = [
     description: "Gravação com Tom Cavalcante, mostrando a excelência e versatilidade dos estúdios AGR.",
     thumbnail: "https://i.ytimg.com/vi/3ElSzCMySrE/hqdefault.jpg",
     youtubeId: "3ElSzCMySrE",
-    startTime: 120
+    startTime: 2765
   },
   {
     id: 6,
@@ -337,7 +337,7 @@ const videoData = [
     description: "Mais um super bate-papo no Docshow com Jojo Todynho no nosso espaço na Barra da Tijuca.",
     thumbnail: "https://i.ytimg.com/vi/9CiwZIyk4bY/hqdefault.jpg",
     youtubeId: "9CiwZIyk4bY",
-    startTime: 120
+    startTime: 2013
   }
 ];
 
@@ -423,7 +423,18 @@ function openModal(videoId) {
 
   console.log("URL DO IFRAME GERADA:", finalUrl);
 
-  document.getElementById('modal-iframe').src = finalUrl;
+  const iframe = document.getElementById('modal-iframe');
+  const loader = document.getElementById('video-loader');
+
+  // Mostra o spinner antes de carregar o vídeo
+  if (loader) loader.style.display = 'flex';
+
+  // Esconde o spinner quando o iframe terminar de carregar
+  iframe.onload = function () {
+    if (loader) loader.style.display = 'none';
+  };
+
+  iframe.src = finalUrl;
   document.getElementById('modal-category').innerText = currentSelectedVideo.category;
   document.getElementById('modal-title').innerText = currentSelectedVideo.title;
   document.getElementById('modal-description').innerText = currentSelectedVideo.description;
@@ -434,6 +445,10 @@ function openModal(videoId) {
   modal.classList.remove('hidden');
   modal.classList.add('flex');
   document.body.style.overflow = 'hidden';
+
+  // Oculta o menu de navegação lateral (bolinhas) enquanto o modal está aberto
+  const navbar = document.getElementById('navbar');
+  if (navbar) navbar.style.display = 'none';
 }
 
 function closeModal() {
@@ -443,9 +458,22 @@ function closeModal() {
   modal.classList.add('hidden');
   modal.classList.remove('flex');
 
-  document.getElementById('modal-iframe').src = "";
+  const iframe = document.getElementById('modal-iframe');
+  if (iframe) {
+    iframe.onload = null;
+    iframe.src = "";
+  }
+
+  // Garante que o spinner volta a aparecer na próxima abertura
+  const loader = document.getElementById('video-loader');
+  if (loader) loader.style.display = 'flex';
+
   currentSelectedVideo = null;
   document.body.style.overflow = 'unset';
+
+  // Restaura o menu de navegação lateral (bolinhas) ao fechar o modal
+  const navbar = document.getElementById('navbar');
+  if (navbar) navbar.style.display = '';
 }
 
 function resetSummaryState() {
