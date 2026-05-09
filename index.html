@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
 	<title>AGR Podcast Estúdios</title>
 	<meta charset="UTF-8">
@@ -23,40 +24,80 @@
 
 	<!-- Estilos Customizados para a Seção Podcast -->
 	<style>
-		.fade-in { animation: fadeIn 0.3s ease-in-out; }
-		.slide-up { animation: slideUp 0.3s ease-out forwards; }
-		
-		@keyframes fadeIn {
-			from { opacity: 0; }
-			to { opacity: 1; }
+		.fade-in {
+			animation: fadeIn 0.3s ease-in-out;
 		}
-		
+
+		.slide-up {
+			animation: slideUp 0.3s ease-out forwards;
+		}
+
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+
 		@keyframes slideUp {
-			from { transform: translateY(16px); opacity: 0; }
-			to { transform: translateY(0); opacity: 1; }
+			from {
+				transform: translateY(16px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
 		}
 
 		@keyframes spin {
-			from { transform: rotate(0deg); }
-			to { transform: rotate(360deg); }
+			from {
+				transform: rotate(0deg);
+			}
+
+			to {
+				transform: rotate(360deg);
+			}
 		}
 
-		.prose-custom p { margin-bottom: 0.75rem; line-height: 1.6; }
-		.prose-custom li { margin-left: 1rem; list-style-type: disc; color: #9ca3af; margin-bottom: 0.25rem; }
-		.prose-custom strong { color: white; }
+		.prose-custom p {
+			margin-bottom: 0.75rem;
+			line-height: 1.6;
+		}
+
+		.prose-custom li {
+			margin-left: 1rem;
+			list-style-type: disc;
+			color: #9ca3af;
+			margin-bottom: 0.25rem;
+		}
+
+		.prose-custom strong {
+			color: white;
+		}
+
+		/* Utilitário para feedback do formulário */
+		.hidden-msg {
+			display: none !important;
+		}
 	</style>
-		<script>
-			(function(w,i,g){w[g]=w[g]||[];if(typeof w[g].push=='function')w[g].push(i)})
-			(window,'G-SEKJ4E9T4H','google_tags_first_party');
-		</script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('set', 'developer_id.dYzg1YT', true);
-			gtag('config', 'G-SEKJ4E9T4H');
-		</script>
+	<script>
+		(function (w, i, g) { w[g] = w[g] || []; if (typeof w[g].push == 'function') w[g].push(i) })
+			(window, 'G-SEKJ4E9T4H', 'google_tags_first_party');
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('set', 'developer_id.dYzg1YT', true);
+		gtag('config', 'G-SEKJ4E9T4H');
+	</script>
 </head>
+
 <body data-aos-easing="slide" data-aos-duration="800" data-aos-delay="0">
 	<nav id="navbar" class="navbar">
 		<ul class="nav-menu">
@@ -97,42 +138,42 @@
 			</li>
 		</ul>
 	</nav>
-		<!-- End Nav Section -->
+	<!-- End Nav Section -->
 
-		<!-- Start Home Section -- cabecalho e logo principal-->
+	<!-- Start Home Section -- cabecalho e logo principal-->
 
-		<section id="home" class="hero-wrap js-fullheight" style="height: 1508px; background-position: 50% 0%;">
-      	<div class="overlay"></div>
-      	<div class="container">
+	<section id="home" class="hero-wrap js-fullheight" style="height: 1508px; background-position: 50% 0%;">
+		<div class="overlay"></div>
+		<div class="container">
 
-        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" style="height: 1508px;">
-          <div class="col-lg-7 ftco-animate d-flex align-items-center fadeInUp ftco-animated">
-          	<div class="text text-center">
-          		<div class="logo">
-					<a href="https://wa.me/+5521981533347" target="_blank">
-						<img src="img/logo/logo_1.png" alt="agr estudios">
-					</a>
+			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+				style="height: 1508px;">
+				<div class="col-lg-7 ftco-animate d-flex align-items-center fadeInUp ftco-animated">
+					<div class="text text-center">
+						<div class="logo">
+							<a href="https://wa.me/+5521981533347" target="_blank">
+								<img src="img/logo/logo_1.png" alt="agr estudios">
+							</a>
+						</div>
+					</div>
 				</div>
-            </div>
-          </div>
-        </div>
-      </div>
-        </section>
-		<!-- End Home Section -->
+			</div>
+		</div>
+	</section>
+	<!-- End Home Section -->
 
 
-		<!-- Start section ABOUT -->
-		<section class="ftco-about img ftco-section py-24" id="about">
-    	<div class="container">
-    		<div class="row d-flex no-gutters">
-    			<div class="col-md-6 col-lg-6 d-flex">
-    				<div class="img-about img d-flex align-items-stretch">
-    					<div class="overlay"></div>
-	    				<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center cursor-pointer" style="position: relative; overflow: hidden;" onclick="openAboutVideo()">
+	<!-- Start section ABOUT -->
+	<section class="ftco-about img ftco-section py-24" id="about">
+		<div class="container">
+			<div class="row d-flex no-gutters">
+				<div class="col-md-6 col-lg-6 d-flex">
+					<div class="img-about img d-flex align-items-stretch">
+						<div class="overlay"></div>
+						<div class="img img-video d-flex align-self-stretch align-items-center justify-content-center cursor-pointer"
+							style="position: relative; overflow: hidden;" onclick="openAboutVideo()">
 							<picture>
-								<img
-									sizes="(max-width: 1400px) 100vw, 1400px"
-									srcset="
+								<img sizes="(max-width: 1400px) 100vw, 1400px" srcset="
 										img/section_about/img_about_02_gyh0gb_c_scale,w_200.jpg 200w,
 										img/section_about/img_about_02_gyh0gb_c_scale,w_395.jpg 395w,
 										img/section_about/img_about_02_gyh0gb_c_scale,w_439.jpg 439w,
@@ -143,527 +184,533 @@
 										img/section_about/img_about_02_gyh0gb_c_scale,w_1141.jpg 1141w,
 										img/section_about/img_about_02_gyh0gb_c_scale,w_1197.jpg 1197w,
 										img/section_about/img_about_02_gyh0gb_c_scale,w_1400.jpg 1400w"
-									src="img/section_about/img_about_02_gyh0gb_c_scale,w_1400.jpg"
-									alt=""
+									src="img/section_about/img_about_02_gyh0gb_c_scale,w_1400.jpg" alt=""
 									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
 							</picture>
-							<div class="d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+							<div class="d-flex align-items-center justify-content-center"
+								style="width: 50px; height: 50px;">
 								<i class="fi fi-ts-play-circle" style="color: white; font-size: 60px;"></i>
-							</div>
-	    				</div>
-    				</div>
-    			</div>
-    			<div class="col-md-6 col-lg-6 pl-md-5">
-	          <div class="heading-section ftco-animate fadeInUp ftco-animated">
-	            <h2 class="mb-4">Sobre a AGR Podcast Estúdios</h2>
-	            <p>Localizado na Barra da Tijuca, a AGR Podcast Estúdios oferece um ambiente sofisticado e tecnologicamente avançado para criadores de conteúdo. Somos a casa de grandes nomes como Mundo GV, Papagaio Falante e Cheguei Podcast.</p>
-	            <p>Com equipamentos de ponta e uma equipe especializada, garantimos a melhor qualidade para o seu podcast, videocast ou transmissão ao vivo. Nosso espaço é projetado para oferecer conforto e acústica impecável.</p>
-
-	            <div class="counter-wrap ftco-animate d-flex my-md-4">
-	              <div class="text">
-	              	<p class="mb-4">
-		                <span class="number" data-number="500">0</span>
-		                <span>Episódios Gravados</span>
-	                </p>
-	              </div>
-		          </div>
-		          <div class="d-flex w-100">
-		            <div class="img img-about-2 mr-2" style="position: relative; overflow: hidden;">
-							<picture>
-								<img
-									sizes="(max-width: 585px) 100vw, 585px"
-									srcset="
-										img/section_about/img_about_01_wuaapx_c_scale,w_345.jpg 345w,
-										img/section_about/img_about_01_wuaapx_c_scale,w_585.jpg 585w"
-									src="img/section_about/img_about_01_wuaapx_c_scale,w_585.jpg"
-									alt=""
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-							</picture>
-						</div>
-		            <div class="img img-about-2 ml-2" style="position: relative; overflow: hidden;">
-							<picture>
-								<img
-									sizes="(max-width: 300px) 100vw, 300px"
-									srcset="
-										img/section_about/img_about_04_zcjuso_c_scale,w_176.jpg 176w,
-										img/section_about/img_about_04_zcjuso_c_scale,w_300.jpg 300w"
-									src="img/section_about/img_about_04_zcjuso_c_scale,w_300.jpg"
-									alt=""
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-							</picture>
-						</div>
-		          </div>
-		          <blockquote class="blockquote mt-5">
-		          	<p class="mb-2">"A qualidade e o profissionalismo da AGR elevam o nível de qualquer produção audiovisual."</p>
-		          	<span>— Equipe AGR</span>
-		          </blockquote>
-	          </div>
-	        </div>
-        </div>
-    	</div>
-        </section>
-		<!-- End section ABOUT -->
-
-		<!-- Start Services Section -->
-		<section id="services" class="ftco-section py-24">
-		  <div class="container">
-		  	<div class="row">
-		  		<div class="col-md-9">
-		  			<div class="row">
-				  		<div class="col-md-5 heading-section ftco-animate pb-5 fadeInUp ftco-animated">
-					<h2 class="mb-4">Nossos Serviços</h2>
-		            <p>Oferecemos soluções completas para a sua produção audiovisual, do áudio ao vídeo.</p>
-		          </div>
-				  	</div>
-		  			<div class="row">
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
-		              <div class="icon">
-						<i class="fi fi-rr-video-camera icon-service"></i>
-					  </div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Gravação de Podcast</h3>
-		                <p>Estúdio completo com microfones de alta fidelidade e câmeras 4K para gravação de áudio e vídeo (Videocast).</p>
-		              </div>
-		            </div> 
-		        	</div>
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
-		              <div class="icon">
-						<i class="fi fi-rr-play-alt"></i>
-					  </div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Transmissão ao Vivo</h3>
-		                <p>Live streaming profissional para YouTube, Twitch e outras plataformas com corte ao vivo e interação.</p>
-		              </div>
-		            </div> 
-		        	</div>
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
-		            	<div class="icon">
-							<i class="fi fi-rr-chart-histogram"></i>
-						</div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Produção Corporativa</h3>
-		                <p>Espaço ideal para gravação de cursos, treinamentos, entrevistas corporativas e conteúdo institucional.</p>
-		              </div>
-		            </div> 
-		        	</div>
-	        	</div>
-	        </div>
-	        <div class="col-md-3 d-flex align-items-stretch">
-	        	<div class="img w-100" style="background-image: url(img/section_services/img_services_02.jpg);"></div>
-	        </div>
-        </div>
-        <div class="row progress-circle pt-md-5">
-        	<div class="col-md-7 order-md-last py-md-5">
-        		<div class="row">
-				  		<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Qualidade de Áudio</h2>
-
-					        <!-- Progress bar 1 -->
-					        <div class="progress mx-auto" data-value="100">
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">100%</div>
-					          </div>
-					        </div>
-					        <!-- END -->
-					      </div>
-					    </div>
-
-					    <div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Produção de Vídeo</h2>
-
-					        <!-- Progress bar 1 -->
-					        <div class="progress mx-auto" data-value="100">
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">100%</div>
-					          </div>
-					        </div>
-					        <!-- END -->
-					      </div>
-					    </div>
-
-					    <div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Estrutura</h2>
-
-					        <!-- Progress bar 1 -->
-					        <div class="progress mx-auto" data-value="100">
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">100%</div>
-					          </div>
-					        </div>
-					        <!-- END -->
-					      </div>
-					    </div>
-
-					    <div class="p-md-4 mt-4">
-					    	<div class="col-md-8 ftco-animate fadeInUp ftco-animated">
-						    	<p>Nossa estrutura é pensada para entregar o máximo de qualidade, garantindo que seu conteúdo se destaque no mercado digital.</p>
-					    	</div>
-					    </div>
-					  </div>
-					</div>
-					<div class="col-md-5 d-flex align-items-stretch">
-	        	<div class="img w-100" style="background-image: url(img/section_services/img_services_01.jpg);"></div>
-	        </div>
-		  	</div>
-		  </div>
-		</section>  
-		<!-- End Services Section -->
-
-		<!-- Start Podcast Section -->
-		<section id="podcast" class="text-gray-200 font-sans selection:bg-[#00c3e3] selection:text-white relative py-24">
-			
-			<!-- Cabeçalho -->
-			<div class="max-w-4xl mx-auto pb-12 px-6 text-center">
-				<h2 class="mb-4 text-base text-[#9da1a5] leading-[1.4] font-bold uppercase tracking-[2px]">
-					PORTFÓLIO DE VÍDEOS
-				</h2>
-				<p class="text-gray-400 text-sm md:text-base">
-					Confira alguns dos grandes projetos gravados na AGR Podcast Estúdios.
-				</p>
-			</div>
-
-			<!-- Grelha de Vídeos -->
-			<div id="video-grid" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
-				<!-- Os vídeos serão injetados aqui via JavaScript -->
-			</div>
-
-			<!-- Modal de Vídeo -->
-			<div id="video-modal" class="fixed inset-0 z-50 hidden flex-col items-center justify-center p-4 md:p-8 bg-black/95 backdrop-blur-md overflow-y-auto">
-				
-				<button 
-					onclick="closeModal()"
-					class="fixed top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-white bg-[#1f1f1f] hover:bg-[#333] p-3 rounded-full transition-colors z-50 shadow-lg"
-					aria-label="Fechar vídeo"
-				>
-					<i class="ph ph-x text-2xl"></i>
-				</button>
-
-				<div class="w-full max-w-6xl mx-auto flex flex-col gap-6 mt-10 md:mt-0 fade-in pointer-events-none">
-					<!-- Wrapper interno para reativar o clique apenas no conteúdo e não no fundo -->
-					<div class="pointer-events-auto">
-						
-						<!-- Player -->
-						<div class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a] mb-6">
-							<!-- Spinner de loading -->
-							<div id="video-loader" class="absolute inset-0 z-10 flex items-center justify-center bg-black">
-								<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation: spin 0.9s linear infinite;">
-									<circle cx="28" cy="28" r="22" stroke="#2a2a2a" stroke-width="4"/>
-									<path d="M28 6 A22 22 0 0 1 50 28" stroke="#00c3e3" stroke-width="4" stroke-linecap="round"/>
-								</svg>
-							</div>
-							<iframe
-								id="modal-iframe"
-								src=""
-								title="Vídeo"
-								class="absolute inset-0 w-full h-full border-0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-								allowfullscreen
-							></iframe>
-						</div>
-						
-						<!-- Secção de Informação e IA abaixo do vídeo -->
-						<div class="flex flex-col md:flex-row gap-6 items-start">
-							<div class="flex-1">
-								<span id="modal-category" class="text-xs font-bold tracking-widest text-[#00c3e3] uppercase mb-1 block"></span>
-								<h3 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-2"></h3>
-								<p id="modal-description" class="text-gray-400"></p>
-							</div>
-
-							<!-- Botão e Box de Resumo IA -->
-							<div class="w-full md:w-1/3 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-5">
-								
-								<!-- Estado Inicial: Botão de Gerar -->
-								<button 
-									id="btn-generate-summary"
-									onclick="handleGenerateSummary()"
-									class="w-full py-3 px-4 bg-[#1f1f1f] hover:bg-[#2a2a2a] border border-[#333] hover:border-[#00c3e3] text-white rounded transition-all flex items-center justify-center gap-2 group"
-								>
-									<i id="btn-icon-sparkle" class="ph ph-sparkle text-xl text-[#00c3e3] group-hover:scale-110 transition-transform"></i>
-									<i id="btn-icon-spinner" class="ph ph-spinner text-xl text-[#00c3e3] animate-spin hidden"></i>
-									<span id="btn-text" class="font-medium text-sm">Destaques da Produção (IA)</span>
-								</button>
-
-								<!-- Estado Final: Resumo Gerado -->
-								<div id="summary-container" class="hidden text-sm text-gray-300 slide-up">
-									<div class="flex items-center gap-2 mb-3 pb-3 border-b border-[#333]">
-										<i class="ph ph-file-text text-[#00c3e3] text-lg"></i>
-										<span class="font-bold text-white">Análise do Estúdio</span>
-									</div>
-									<div id="summary-content" class="space-y-2 prose-custom">
-										<!-- O conteúdo gerado será injetado aqui -->
-									</div>
-								</div>
-
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<!-- End Podcast Section -->
+				<div class="col-md-6 col-lg-6 pl-md-5">
+					<div class="heading-section ftco-animate fadeInUp ftco-animated">
+						<h2 class="mb-4">Sobre a AGR Podcast Estúdios</h2>
+						<p>Localizado na Barra da Tijuca, a AGR Podcast Estúdios oferece um ambiente sofisticado e
+							tecnologicamente avançado para criadores de conteúdo. Somos a casa de grandes nomes como
+							Mundo GV, Papagaio Falante e Cheguei Podcast.</p>
+						<p>Com equipamentos de ponta e uma equipe especializada, garantimos a melhor qualidade para o
+							seu podcast, videocast ou transmissão ao vivo. Nosso espaço é projetado para oferecer
+							conforto e acústica impecável.</p>
 
-		<!-- Start Testimonials Section -->
-		<section id="work" class="ftco-section py-24">
-		  <div class="container">
-		  	<div class="row justify-content-center">
-		  		<div class="col-md-4 heading-section text-center ftco-animate pb-5 fadeInUp ftco-animated">
-            <h2 class="mb-4">Nossos Parceiros</h2>
-            <p>Confira alguns dos grandes projetos gravados na AGR Podcast Estúdios.</p>
-          </div>
-		  	</div>
-		  </div> 
-		  <div class="container-fluid px-md-0">
-        <div class="row no-gutters">
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-20"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+						<div class="counter-wrap ftco-animate d-flex my-md-4">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="500">0</span>
+									<span>Episódios Gravados</span>
+								</p>
+							</div>
+						</div>
+						<div class="d-flex w-100">
+							<div class="img img-about-2 mr-2" style="position: relative; overflow: hidden;">
+								<picture>
+									<img sizes="(max-width: 585px) 100vw, 585px" srcset="
+										img/section_about/img_about_01_wuaapx_c_scale,w_345.jpg 345w,
+										img/section_about/img_about_01_wuaapx_c_scale,w_585.jpg 585w"
+										src="img/section_about/img_about_01_wuaapx_c_scale,w_585.jpg" alt=""
+										style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+								</picture>
+							</div>
+							<div class="img img-about-2 ml-2" style="position: relative; overflow: hidden;">
+								<picture>
+									<img sizes="(max-width: 300px) 100vw, 300px" srcset="
+										img/section_about/img_about_04_zcjuso_c_scale,w_176.jpg 176w,
+										img/section_about/img_about_04_zcjuso_c_scale,w_300.jpg 300w"
+										src="img/section_about/img_about_04_zcjuso_c_scale,w_300.jpg" alt=""
+										style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+								</picture>
+							</div>
+						</div>
+						<blockquote class="blockquote mt-5">
+							<p class="mb-2">"A qualidade e o profissionalismo da AGR elevam o nível de qualquer produção
+								audiovisual."</p>
+							<span>— Equipe AGR</span>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End section ABOUT -->
+
+	<!-- Start Services Section -->
+	<section id="services" class="ftco-section py-24">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-9">
+					<div class="row">
+						<div class="col-md-5 heading-section ftco-animate pb-5 fadeInUp ftco-animated">
+							<h2 class="mb-4">Nossos Serviços</h2>
+							<p>Oferecemos soluções completas para a sua produção audiovisual, do áudio ao vídeo.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
+								<div class="icon">
+									<i class="fi fi-rr-video-camera icon-service"></i>
+								</div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Gravação de Podcast</h3>
+									<p>Estúdio completo com microfones de alta fidelidade e câmeras 4K para gravação de
+										áudio e vídeo (Videocast).</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
+								<div class="icon">
+									<i class="fi fi-rr-play-alt"></i>
+								</div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Transmissão ao Vivo</h3>
+									<p>Live streaming profissional para YouTube, Twitch e outras plataformas com corte
+										ao vivo e interação.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate fadeInUp ftco-animated">
+								<div class="icon">
+									<i class="fi fi-rr-chart-histogram"></i>
+								</div>
+								<div class="media-body">
+									<h3 class="heading mb-3">Produção Corporativa</h3>
+									<p>Espaço ideal para gravação de cursos, treinamentos, entrevistas corporativas e
+										conteúdo institucional.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 d-flex align-items-stretch">
+					<div class="img w-100" style="background-image: url(img/section_services/img_services_02.jpg);">
+					</div>
+				</div>
+			</div>
+			<div class="row progress-circle pt-md-5">
+				<div class="col-md-7 order-md-last py-md-5">
+					<div class="row">
+						<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Qualidade de Áudio</h2>
+
+								<!-- Progress bar 1 -->
+								<div class="progress mx-auto" data-value="100">
+									<span class="progress-left">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<span class="progress-right">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<div
+										class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+										<div class="h5">100%</div>
+									</div>
+								</div>
+								<!-- END -->
+							</div>
+						</div>
+
+						<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Produção de Vídeo</h2>
+
+								<!-- Progress bar 1 -->
+								<div class="progress mx-auto" data-value="100">
+									<span class="progress-left">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<span class="progress-right">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<div
+										class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+										<div class="h5">100%</div>
+									</div>
+								</div>
+								<!-- END -->
+							</div>
+						</div>
+
+						<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Estrutura</h2>
+
+								<!-- Progress bar 1 -->
+								<div class="progress mx-auto" data-value="100">
+									<span class="progress-left">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<span class="progress-right">
+										<span class="progress-bar border-primary"></span>
+									</span>
+									<div
+										class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+										<div class="h5">100%</div>
+									</div>
+								</div>
+								<!-- END -->
+							</div>
+						</div>
+
+						<div class="p-md-4 mt-4">
+							<div class="col-md-8 ftco-animate fadeInUp ftco-animated">
+								<p>Nossa estrutura é pensada para entregar o máximo de qualidade, garantindo que seu
+									conteúdo se destaque no mercado digital.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5 d-flex align-items-stretch">
+					<div class="img w-100" style="background-image: url(img/section_services/img_services_01.jpg);">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Services Section -->
+
+	<!-- Start Podcast Section -->
+	<section id="podcast" class="text-gray-200 font-sans selection:bg-[#00c3e3] selection:text-white relative py-24">
+
+		<!-- Cabeçalho -->
+		<div class="max-w-4xl mx-auto pb-12 px-6 text-center">
+			<h2 class="mb-4 text-base text-[#9da1a5] leading-[1.4] font-bold uppercase tracking-[2px]">
+				PORTFÓLIO DE VÍDEOS
+			</h2>
+			<p class="text-gray-400 text-sm md:text-base">
+				Confira alguns dos grandes projetos gravados na AGR Podcast Estúdios.
+			</p>
+		</div>
+
+		<!-- Grelha de Vídeos -->
+		<div id="video-grid" class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
+			<!-- Os vídeos serão injetados aqui via JavaScript -->
+		</div>
+
+		<!-- Modal de Vídeo -->
+		<div id="video-modal"
+			class="fixed inset-0 z-50 hidden flex-col items-center justify-center p-4 md:p-8 bg-black/95 backdrop-blur-md overflow-y-auto">
+
+			<button onclick="closeModal()"
+				class="fixed top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-white bg-[#1f1f1f] hover:bg-[#333] p-3 rounded-full transition-colors z-50 shadow-lg"
+				aria-label="Fechar vídeo">
+				<i class="ph ph-x text-2xl"></i>
+			</button>
+
+			<div class="w-full max-w-6xl mx-auto flex flex-col gap-6 mt-10 md:mt-0 fade-in pointer-events-none">
+				<!-- Wrapper interno para reativar o clique apenas no conteúdo e não no fundo -->
+				<div class="pointer-events-auto">
+
+					<!-- Player -->
+					<div
+						class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a] mb-6">
+						<!-- Spinner de loading -->
+						<div id="video-loader" class="absolute inset-0 z-10 flex items-center justify-center bg-black">
+							<svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+								xmlns="http://www.w3.org/2000/svg" style="animation: spin 0.9s linear infinite;">
+								<circle cx="28" cy="28" r="22" stroke="#2a2a2a" stroke-width="4" />
+								<path d="M28 6 A22 22 0 0 1 50 28" stroke="#00c3e3" stroke-width="4"
+									stroke-linecap="round" />
+							</svg>
+						</div>
+						<iframe id="modal-iframe" src="" title="Vídeo" class="absolute inset-0 w-full h-full border-0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+					</div>
+
+					<!-- Secção de Informação e IA abaixo do vídeo -->
+					<div class="flex flex-col md:flex-row gap-6 items-start">
+						<div class="flex-1">
+							<span id="modal-category"
+								class="text-xs font-bold tracking-widest text-[#00c3e3] uppercase mb-1 block"></span>
+							<h3 id="modal-title" class="text-2xl md:text-3xl font-bold text-white mb-2"></h3>
+							<p id="modal-description" class="text-gray-400"></p>
+						</div>
+
+						<!-- Botão e Box de Resumo IA -->
+						<div class="w-full md:w-1/3 bg-[#1a1a1a] rounded-lg border border-[#2a2a2a] p-5">
+
+							<!-- Estado Inicial: Botão de Gerar -->
+							<button id="btn-generate-summary" onclick="handleGenerateSummary()"
+								class="w-full py-3 px-4 bg-[#1f1f1f] hover:bg-[#2a2a2a] border border-[#333] hover:border-[#00c3e3] text-white rounded transition-all flex items-center justify-center gap-2 group">
+								<i id="btn-icon-sparkle"
+									class="ph ph-sparkle text-xl text-[#00c3e3] group-hover:scale-110 transition-transform"></i>
+								<i id="btn-icon-spinner"
+									class="ph ph-spinner text-xl text-[#00c3e3] animate-spin hidden"></i>
+								<span id="btn-text" class="font-medium text-sm">Destaques da Produção (IA)</span>
+							</button>
+
+							<!-- Estado Final: Resumo Gerado -->
+							<div id="summary-container" class="hidden text-sm text-gray-300 slide-up">
+								<div class="flex items-center gap-2 mb-3 pb-3 border-b border-[#333]">
+									<i class="ph ph-file-text text-[#00c3e3] text-lg"></i>
+									<span class="font-bold text-white">Análise do Estúdio</span>
+								</div>
+								<div id="summary-content" class="space-y-2 prose-custom">
+									<!-- O conteúdo gerado será injetado aqui -->
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Podcast Section -->
+
+	<!-- Start Testimonials Section -->
+	<section id="work" class="ftco-section py-24">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-4 heading-section text-center ftco-animate pb-5 fadeInUp ftco-animated">
+					<h2 class="mb-4">Galeria de Clientes</h2>
+					<p>Confira os bastidores e ensaios fotográficos realizados em nossos estúdios.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid px-md-0">
+			<div class="row no-gutters">
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-20" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_01_m5vdma_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_01_m5vdma_c_scale,w_593.jpg 593w,
 										img/section_galeria/img_media_flex/port_01_m5vdma_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_01_m5vdma_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 01"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_01.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    				</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_01_m5vdma_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 01"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_01.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-top"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-top" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_02_vrhtwe_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_02_vrhtwe_c_scale,w_683.jpg 683w,
 										img/section_galeria/img_media_flex/port_02_vrhtwe_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_02_vrhtwe_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 02"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_02.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    			<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    		</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_02_vrhtwe_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 02"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_02.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-10"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-10" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_03_taitlp_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_03_taitlp_c_scale,w_725.jpg 725w,
 										img/section_galeria/img_media_flex/port_03_taitlp_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_03_taitlp_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 03"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_03.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    			<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    		</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_03_taitlp_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 03"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_03.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-20"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end" style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-20" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_04_mmor3e_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_04_mmor3e_c_scale,w_660.jpg 660w,
 										img/section_galeria/img_media_flex/port_04_mmor3e_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_04_mmor3e_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 04"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_04.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    				</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_04_mmor3e_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 04"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_04.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end " style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-40"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end " style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-40" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_05_l41pvf_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_05_l41pvf_c_scale,w_694.jpg 694w,
 										img/section_galeria/img_media_flex/port_05_l41pvf_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_05_l41pvf_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 05"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_05.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    				</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_05_l41pvf_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 05"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_05.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 ftco-animate fadeInUp ftco-animated">
-            <div class="model img d-flex align-items-end " style="position: relative; overflow: hidden;">
-							<picture>
-								<img class="foto-down-40"
-									sizes="(max-width: 800px) 100vw, 800px"
-									srcset="
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 ftco-animate fadeInUp ftco-animated">
+					<div class="model img d-flex align-items-end " style="position: relative; overflow: hidden;">
+						<picture>
+							<img class="foto-down-40" sizes="(max-width: 800px) 100vw, 800px" srcset="
 										img/section_galeria/img_media_flex/port_06_gad2xj_c_scale,w_350.jpg 350w,
 										img/section_galeria/img_media_flex/port_06_gad2xj_c_scale,w_689.jpg 689w,
 										img/section_galeria/img_media_flex/port_06_gad2xj_c_scale,w_800.jpg 800w"
-									src="img/section_galeria/img_media_flex/port_06_gad2xj_c_scale,w_800.jpg"
-									alt="Galeria AGR - Foto 06"
-									style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-							</picture>
-            	<a href="img/section_galeria/port_06.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
-	    				</a>
-            	<div class="desc w-100 px-4">
-	              <div class="text w-100 mb-3">
-	              	<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
+								src="img/section_galeria/img_media_flex/port_06_gad2xj_c_scale,w_800.jpg"
+								alt="Galeria AGR - Foto 06"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+						</picture>
+						<a href="img/section_galeria/port_06.jpg"
+							class="icon image-popup d-flex justify-content-center align-items-center">
+							<i class="fi fi-rr-arrow-up-right-and-arrow-down-left-from-center"></i>
+						</a>
+						<div class="desc w-100 px-4">
+							<div class="text w-100 mb-3">
+								<!-- <span></span> lembre que se quiser colocar o nome do podcast ou do cliente aqui, é só colocar dentro da tag <span></span>
 	              	<h2><a href="#"></a></h2> aqui tambem ja esta configurado para aparecere tipo o sobrenome do cliente. -->
-	              </div>
-              </div>
-            </div>
-          </div>
-
-
-
-        </div>
-      </div> 
-		</section>
-		<!-- End Project Section -->
-
-		<section class="ftco-section testimony-section py-24" id="testimonial">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-3">
-					<div class="col-md-4 heading-section ftco-animate fadeInUp ftco-animated">
-						<span class="subheading">Depoimentos</span>
-						<h2 class="mb-4">O que dizem sobre nós</h2>
-						<p>A satisfação de quem grava na AGR Podcast Estúdios.</p>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="row ftco-animate fadeInUp ftco-animated">
-					<div class="col-md-12">
-						<div class="carousel-testimony owl-carousel owl-loaded">
-							<div class="item">
-								<div class="testimony-wrap p-4 pb-5">
-									<div class="user-img mb-4" style="background-image: url(img/section_testemunhal/img_testemunhal_02.jpg)">
-										<span class="quote d-flex align-items-center justify-content-center">
-											<i class="fi fi-rr-quote-right"></i>
-										</span>
-									</div>
-									<div class="text">
-										<p class="mb-5 pl-4 line">A estrutura é fantástica, o atendimento é de primeira. Me senti em casa gravando aqui.</p>
-										<div class="pl-5">
-											<p class="name">Getúlio Vargas</p>
-											<span class="position">Mundo GV</span>
-										</div>
+
+
+
+			</div>
+		</div>
+	</section>
+	<!-- End Project Section -->
+
+	<section class="ftco-section testimony-section py-24" id="testimonial">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-4 heading-section ftco-animate fadeInUp ftco-animated">
+					<span class="subheading">Depoimentos</span>
+					<h2 class="mb-4">O que dizem sobre nós</h2>
+					<p>A satisfação de quem grava na AGR Podcast Estúdios.</p>
+				</div>
+			</div>
+			<div class="row ftco-animate fadeInUp ftco-animated">
+				<div class="col-md-12">
+					<div class="carousel-testimony owl-carousel owl-loaded">
+						<div class="item">
+							<div class="testimony-wrap p-4 pb-5">
+								<div class="user-img mb-4"
+									style="background-image: url(img/section_testemunhal/img_testemunhal_02.jpg)">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="fi fi-rr-quote-right"></i>
+									</span>
+								</div>
+								<div class="text">
+									<p class="mb-5 pl-4 line">A estrutura é fantástica, o atendimento é de primeira. Me
+										senti em casa gravando aqui.</p>
+									<div class="pl-5">
+										<p class="name">Getúlio Vargas</p>
+										<span class="position">Mundo GV</span>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap p-4 pb-5">
-									<div class="user-img mb-4" style="background-image: url(img/section_testemunhal/img_testemunhal_03.jpg)">
-										<span class="quote d-flex align-items-center justify-content-center">
-											<i class="fi fi-rr-quote-right"></i>
-										</span>
-									</div>
-									<div class="text">
-										<p class="mb-5 pl-4 line">Profissionalismo total. Equipamentos de ponta e uma equipe que resolve tudo.</p>
-										<div class="pl-5">
-											<p class="name">Sérgio Mallandro</p>
-											<span class="position">Papagaio Falante</span>
-										</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap p-4 pb-5">
+								<div class="user-img mb-4"
+									style="background-image: url(img/section_testemunhal/img_testemunhal_03.jpg)">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="fi fi-rr-quote-right"></i>
+									</span>
+								</div>
+								<div class="text">
+									<p class="mb-5 pl-4 line">Profissionalismo total. Equipamentos de ponta e uma equipe
+										que resolve tudo.</p>
+									<div class="pl-5">
+										<p class="name">Sérgio Mallandro</p>
+										<span class="position">Papagaio Falante</span>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap p-4 pb-5">
-									<div class="user-img mb-4" style="background-image: url(img/section_testemunhal/img_testemunhal_01.jpg)">
-										<span class="quote d-flex align-items-center justify-content-center">
-											<i class="fi fi-rr-quote-right"></i>
-										</span>
-									</div>
-									<div class="text">
-										<p class="mb-5 pl-4 line">O melhor estúdio da Barra da Tijuca. Recomendo para todos os meus convidados.</p>
-										<div class="pl-5">
-											<p class="name">José Carlos Araújo</p>
-											<span class="position">Cheguei Podcast</span>
-										</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap p-4 pb-5">
+								<div class="user-img mb-4"
+									style="background-image: url(img/section_testemunhal/img_testemunhal_01.jpg)">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="fi fi-rr-quote-right"></i>
+									</span>
+								</div>
+								<div class="text">
+									<p class="mb-5 pl-4 line">O melhor estúdio da Barra da Tijuca. Recomendo para todos
+										os meus convidados.</p>
+									<div class="pl-5">
+										<p class="name">José Carlos Araújo</p>
+										<span class="position">Cheguei Podcast</span>
 									</div>
 								</div>
 							</div>
-							<div class="item">
-								<div class="testimony-wrap p-4 pb-5">
-									<div class="user-img mb-4" style="background-image: url(img/section_testemunhal/img_testemunhal_04.jpg)">
-										<span class="quote d-flex align-items-center justify-content-center">
-											<i class="fi fi-rr-quote-right"></i>
-										</span>
-									</div>
-									<div class="text">
-										<p class="mb-5 pl-4 line">Ambiente incrível e tecnologia de última geração. O resultado final ficou perfeito.</p>
-										<div class="pl-5">
-											<p class="name">Rico de Souza</p>
-											<span class="position">Aloha Podcast</span>
-										</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap p-4 pb-5">
+								<div class="user-img mb-4"
+									style="background-image: url(img/section_testemunhal/img_testemunhal_04.jpg)">
+									<span class="quote d-flex align-items-center justify-content-center">
+										<i class="fi fi-rr-quote-right"></i>
+									</span>
+								</div>
+								<div class="text">
+									<p class="mb-5 pl-4 line">Ambiente incrível e tecnologia de última geração. O
+										resultado final ficou perfeito.</p>
+									<div class="pl-5">
+										<p class="name">Rico de Souza</p>
+										<span class="position">Aloha Podcast</span>
 									</div>
 								</div>
 							</div>
@@ -671,117 +718,143 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<!-- Start Contact Section -->
-		<section class="ftco-section contact-section py-24" id="contact">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-4 heading-section text-center ftco-animate fadeInUp ftco-animated">
-            <h2 class="mb-4">Entre em Contato</h2>
-            <p>Fale conosco e agende sua gravação na AGR Podcast Estúdios.</p>
-          </div>
-        </div>
+	<!-- Start Contact Section -->
+	<section class="ftco-section contact-section py-24" id="contact">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-4 heading-section text-center ftco-animate fadeInUp ftco-animated">
+					<h2 class="mb-4">Entre em Contato</h2>
+					<p>Fale conosco e agende sua gravação na AGR Podcast Estúdios.</p>
+				</div>
+			</div>
 
-        <div class="row mb-5">
-          <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
-          	<div class="align-self-stretch box text-center p-4">
-          		<div>
-	          		<h3 class="mb-4"><i class="fi fi-rr-marker"></i></h3>
-		            <p>Barra da Tijuca, Rio de Janeiro - RJ</p>
-		          </div>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
-          	<div class="align-self-stretch box text-center p-4">
-          		<div>
-	          		<h3 class="mb-4"><i class="fi fi-rr-phone-call"></i></h3>
-		            <p><a href="https://wa.me/+5521981533347">+55 21 98153-3347</a></p>
-	            </div>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
-          	<div class="align-self-stretch box text-center p-4">
-          		<div>
-	          		<h3 class="mb-4"><i class="fi fi-rr-envelope"></i></h3>
-		            <p><a href="mailto:contato@agrpodcast.com.br">contato@agrpodcast.com.br</a></p>
-		          </div>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
-          	<div class="align-self-stretch box text-center p-4">
-          		<div>
-	          		<h3 class="mb-4"><i class="fi fi-rr-globe"></i></h3>
-		            <p><a href="#">agrpodcast.com.br</a></p>
-	            </div>
-	          </div>
-          </div>
-        </div>
-
-        <div class="row block-9">
-          <div class="col-md-6 ftco-animate fadeInUp ftco-animated">
-            <form action="" class="contact-form p-4 p-md-5 py-md-5">
-              <div class="form-group">
-                <!-- MODIFICAÇÃO TEMPORÁRIA: readonly adicionado. Remova o atributo 'readonly' para permitir edição. -->
-                <input type="text" class="form-control" placeholder="Seu Nome" readonly>
-              </div>
-              <div class="form-group">
-                <!-- MODIFICAÇÃO TEMPORÁRIA: readonly adicionado. Remova o atributo 'readonly' para permitir edição. -->
-                <input type="text" class="form-control" placeholder="Seu Email" readonly>
-              </div>
-              <div class="form-group">
-                <!-- MODIFICAÇÃO TEMPORÁRIA: readonly adicionado. Remova o atributo 'readonly' para permitir edição. -->
-                <input type="text" class="form-control" placeholder="Assunto" readonly>
-              </div>
-              <div class="form-group">
-                <!-- MODIFICAÇÃO TEMPORÁRIA: readonly adicionado. Remova o atributo 'readonly' para permitir edição. -->
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem" readonly></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Enviar Mensagem" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          </div>
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16496.564614444516!2d-43.35366318321832!3d-22.998997993897103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda4865d12b9d%3A0x71766f49f86252c!2sAGR%20Podcast%20Est%C3%BAdios!5e1!3m2!1spt-BR!2sbr!4v1773244355909!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-        </section>
-		<!-- End Contact Section -->
-
-
-		<!-- Start Footer Section -->
-		<footer class="ftco-footer py-16">
-			<div class="container text-center">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<p>
-							Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | AGR Podcast Estúdios | Created by <a href="https://github.com/LuizCarlosButtner" target="_blank">@luizCarlosGithub</a>
-						</p>
-						<ul class="ftco-footer-social p-0">
-							<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast" target="_blank"><i class="fi fi-brands-twitter"></i></a></li>
-							<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast" target="_blank"><i class="fi fi-brands-facebook"></i></a></li>
-							<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast" target="_blank"><i class="fi fi-brands-instagram"></i></a></li>
-						</ul>
+			<div class="row mb-5">
+				<div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
+					<div class="align-self-stretch box text-center p-4" onclick="window.open('https://www.google.com/maps/search/?api=1&query=AGR+Podcast+Estúdios+Barra+da+Tijuca', '_blank')" style="cursor: pointer;">
+						<div>
+							<h3 class="mb-4"><i class="fi fi-rr-marker"></i></h3>
+							<p>Barra da Tijuca, Rio de Janeiro - RJ</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
+					<div class="align-self-stretch box text-center p-4" onclick="window.open('https://wa.me/+5521981533347', '_blank')" style="cursor: pointer;">
+						<div>
+							<h3 class="mb-4"><i class="fi fi-rr-phone-call"></i></h3>
+							<p><a href="https://wa.me/+5521981533347">+55 21 98153-3347</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
+					<div class="align-self-stretch box text-center p-4" onclick="window.open('mailto:contato@agrpodcast.com.br', '_self')" style="cursor: pointer;">
+						<div>
+							<h3 class="mb-4"><i class="fi fi-rr-envelope"></i></h3>
+							<p><a href="mailto:contato@agrpodcast.com.br">contato@agrpodcast.com.br</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 d-flex ftco-animate fadeInUp ftco-animated">
+					<div class="align-self-stretch box text-center p-4" onclick="location.href='#home'" style="cursor: pointer;">
+						<div>
+							<h3 class="mb-4"><i class="fi fi-rr-globe"></i></h3>
+							<p><a href="#home">agrpodcast.com.br</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<!-- End Footer Section -->
-   
+
+			<div class="row block-9">
+				<div class="col-md-6 ftco-animate fadeInUp ftco-animated">
+					<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form p-4 p-md-5 py-md-5">
+
+					<!-- Web3Forms: honeypot anti-spam (deve permanecer no HTML) -->
+					<input type="checkbox" name="botcheck" style="display:none">
+
+					<div class="form-group">
+						<input type="text" name="name" class="form-control" placeholder="Seu Nome *" required>
+					</div>
+					<div class="form-group">
+						<input type="tel" name="phone" class="form-control" placeholder="Seu Telefone / WhatsApp *" required>
+					</div>
+					<div class="form-group">
+						<input type="email" name="email" class="form-control" placeholder="Seu Email">
+					</div>
+					<div class="form-group">
+						<input type="text" name="subject_detail" class="form-control" placeholder="Assunto">
+					</div>
+					<div class="form-group">
+						<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Mensagem"></textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" id="btn-submit" class="btn btn-primary py-3 px-5" style="display:inline-flex; align-items:center; gap:8px;">
+							<svg id="btn-submit-spinner" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none; animation: spin 0.9s linear infinite;">
+								<path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+							</svg>
+							<span id="btn-submit-text">Enviar Mensagem</span>
+						</button>
+					</div>
+
+					<div id="form-success" style="display:none; margin-top:12px; padding:14px 18px; background:#d1fae5; border:1px solid #6ee7b7; border-radius:8px; color:#065f46; font-size:14px;">
+					✅ Mensagem enviada com sucesso! Retornaremos em breve.
+				</div>
+				<div id="form-error" style="display:none; margin-top:12px; padding:14px 18px; background:#fee2e2; border:1px solid #fca5a5; border-radius:8px; color:#991b1b; font-size:14px;">
+						❌ Erro ao enviar. Tente novamente ou nos chame pelo <a href="https://wa.me/+5521981533347" style="color:#991b1b; font-weight:bold;">WhatsApp</a>.
+					</div>
+
+				</form>
+				</div>
+
+				<div class="col-md-6 d-flex align-items-stretch">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16496.564614444516!2d-43.35366318321832!3d-22.998997993897103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bda4865d12b9d%3A0x71766f49f86252c!2sAGR%20Podcast%20Est%C3%BAdios!5e1!3m2!1spt-BR!2sbr!4v1773244355909!5m2!1spt-BR!2sbr"
+						width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Section -->
+
+
+	<!-- Start Footer Section -->
+	<footer class="ftco-footer py-16">
+		<div class="container text-center">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<p style="padding: 30px;">
+						Copyright ©
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | AGR Podcast
+						Estúdios | Created by <a href="https://github.com/LuizCarlosButtner"
+							target="_blank">@luizCarlosGithub</a>
+					</p>
+					<ul class="ftco-footer-social p-0">
+						<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast"
+								target="_blank"><i class="fi fi-brands-twitter"></i></a></li>
+						<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast"
+								target="_blank"><i class="fi fi-brands-facebook"></i></a></li>
+						<li class="ftco-animate fadeInUp ftco-animated"><a href="https://www.instagram.com/agrpodcast"
+								target="_blank"><i class="fi fi-brands-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End Footer Section -->
+
 	<!-- Modal do Vídeo Sobre -->
-	<div id="about-video-modal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 bg-black/95 backdrop-blur-md">
-		<button 
-			onclick="closeAboutVideo()"
+	<div id="about-video-modal"
+		class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+		<button onclick="closeAboutVideo()"
 			class="absolute top-4 right-4 md:top-8 md:right-8 text-gray-400 hover:text-white bg-[#1f1f1f] hover:bg-[#333] p-3 rounded-full transition-colors z-[110] shadow-lg"
-			aria-label="Fechar vídeo"
-		>
+			aria-label="Fechar vídeo">
 			<i class="ph ph-x text-2xl"></i>
 		</button>
 		<div class="w-full max-w-4xl mx-auto flex flex-col gap-6 fade-in relative z-[100]">
-			<div class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a]">
+			<div
+				class="relative w-full aspect-video bg-black shadow-2xl rounded-sm overflow-hidden border border-[#2a2a2a]">
 				<video id="about-video-player" controls class="w-full h-full outline-none">
 					<source src="media/Premmia fedd.mp4" type="video/mp4">
 					Seu navegador não suporta o elemento de vídeo.
@@ -790,22 +863,28 @@
 		</div>
 	</div>
 
-    <script src="js/about-video.js?v=20260508"></script>
+	<script src="js/about-video.js?v=20260508"></script>
 
 
-    <!-- loader -->
-    <div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle></svg></div>
+	<!-- loader -->
+	<div id="ftco-loader" class="fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00"></circle>
+		</svg></div>
 
 
-    <script src="js/jquery.min.js?v=20260508"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js?v=20260508"></script>
-    <script src="js/jquery.easing.1.3.js?v=20260508"></script>
-    <script src="js/jquery.waypoints.min.js?v=20260508"></script>
-    <script src="js/jquery.stellar.min.js?v=20260508"></script>
-    <script src="js/owl.carousel.min.js?v=20260508"></script>
-    <script src="js/jquery.magnific-popup.min.js?v=20260508"></script>
-    <script src="js/jquery.animateNumber.min.js?v=20260508"></script>
-    <script src="js/main.js?v=20260508"></script>
+	<script src="js/jquery.min.js?v=20260508"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js?v=20260508"></script>
+	<script src="js/jquery.easing.1.3.js?v=20260508"></script>
+	<script src="js/jquery.waypoints.min.js?v=20260508"></script>
+	<script src="js/jquery.stellar.min.js?v=20260508"></script>
+	<script src="js/owl.carousel.min.js?v=20260508"></script>
+	<script src="js/jquery.magnific-popup.min.js?v=20260508"></script>
+	<script src="js/jquery.animateNumber.min.js?v=20260508"></script>
+	<script src="js/main.js?v=20260508"></script>
+	<script src="js/contact-form.js?v=20260509"></script>
 
 </body>
+
 </html>
