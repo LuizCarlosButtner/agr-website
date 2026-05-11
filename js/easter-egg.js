@@ -6,7 +6,7 @@
   'use strict';
 
   // ── Configuração da imagem do funcionário do mês ──────────────────
-  const EMPLOYEE_IMG = 'img/funcionario_mes.png';
+  const EMPLOYEE_IMG = 'img/whatsapp-media-1778520057230.gif';
   const EMPLOYEE_NAME = 'Super DVD';
   const EMPLOYEE_ROLE = 'Editor';
 
@@ -65,9 +65,9 @@
                white-space:nowrap;
           ">⭐ AGR Podcast Estúdios ⭐</div>
 
-          <!-- Foto quadrada grande -->
+          <!-- Foto vertical sem bordas -->
           <div style="
-               width:320px; height:320px;
+               width:220px; height:320px;
                border-radius:16px; overflow:hidden;
                margin:16px auto 28px;
                border:4px solid #f9a825;
@@ -75,7 +75,7 @@
                max-width:100%;
           ">
             <img src="${EMPLOYEE_IMG}" alt="Funcionário do Mês"
-                 style="width:100%;height:100%;object-fit:cover;object-position:center top;">
+                 style="width:100%;height:100%;object-fit:cover;object-position:center;">
           </div>
 
           <!-- Título grande -->
