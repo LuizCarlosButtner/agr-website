@@ -6,26 +6,26 @@
   'use strict';
 
   // ── Configuração da imagem do funcionário do mês ──────────────────
-  const EMPLOYEE_IMG   = 'img/funcionario_mes.png';
-  const EMPLOYEE_NAME  = 'Carlos Henrique';
-  const EMPLOYEE_ROLE  = 'Operador de Estúdio';
+  const EMPLOYEE_IMG = 'img/funcionario_mes.png';
+  const EMPLOYEE_NAME = 'Super DVD';
+  const EMPLOYEE_ROLE = 'Editor';
 
   // ── Paleta de confetes ────────────────────────────────────────────
   const CONFETTI_COLORS = [
-    '#f9a825','#e53935','#1e88e5','#43a047',
-    '#8e24aa','#00acc1','#fb8c00','#d81b60',
-    '#ffffff','#c6ff00'
+    '#f9a825', '#e53935', '#1e88e5', '#43a047',
+    '#8e24aa', '#00acc1', '#fb8c00', '#d81b60',
+    '#ffffff', '#c6ff00'
   ];
 
   const TOTAL_CONFETTI = 180;
-  let confettiActive   = false;
-  let confettiPieces   = [];
-  let animFrameId      = null;
+  let confettiActive = false;
+  let confettiPieces = [];
+  let animFrameId = null;
 
   // ─────────────────────────────────────────────────────────────────
   // 1. Injeta o HTML do modal ao carregar a página
   // ─────────────────────────────────────────────────────────────────
-  function injectModal () {
+  function injectModal() {
     const html = `
       <!-- Easter Egg Modal: Funcionário do Mês -->
       <div id="ee-overlay" aria-hidden="true"
@@ -120,15 +120,15 @@
   // ─────────────────────────────────────────────────────────────────
   // 2. Abrir o easter egg  (trigger via onclick no HTML)
   // ─────────────────────────────────────────────────────────────────
-  function openEasterEgg () {
+  function openEasterEgg() {
     const overlay = document.getElementById('ee-overlay');
-    const card    = document.getElementById('ee-card');
+    const card = document.getElementById('ee-card');
     if (!overlay || !card) return;
 
     overlay.style.display = 'flex';
     // Força reflow antes de ativar transição
     void card.offsetWidth;
-    card.style.opacity   = '1';
+    card.style.opacity = '1';
     card.style.transform = 'scale(1) translateY(0)';
 
     startConfetti();
@@ -140,12 +140,12 @@
   // ─────────────────────────────────────────────────────────────────
   // 4. Fechar o easter egg
   // ─────────────────────────────────────────────────────────────────
-  function closeEasterEgg () {
+  function closeEasterEgg() {
     const overlay = document.getElementById('ee-overlay');
-    const card    = document.getElementById('ee-card');
+    const card = document.getElementById('ee-card');
     if (!overlay || !card) return;
 
-    card.style.opacity   = '0';
+    card.style.opacity = '0';
     card.style.transform = 'scale(0.7) translateY(40px)';
     setTimeout(function () {
       overlay.style.display = 'none';
@@ -157,12 +157,12 @@
   // ─────────────────────────────────────────────────────────────────
   // 5. Sistema de confetes
   // ─────────────────────────────────────────────────────────────────
-  function startConfetti () {
+  function startConfetti() {
     if (confettiActive) return;
     confettiActive = true;
 
     const canvas = document.getElementById('ee-canvas');
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     confettiPieces = [];
@@ -170,7 +170,7 @@
       confettiPieces.push(createPiece(canvas.width, canvas.height, true));
     }
 
-    animFrameId = requestAnimationFrame(function loop () {
+    animFrameId = requestAnimationFrame(function loop() {
       if (!confettiActive) return;
       tickConfetti();
       animFrameId = requestAnimationFrame(loop);
@@ -179,7 +179,7 @@
     window.addEventListener('resize', onResize);
   }
 
-  function stopConfetti () {
+  function stopConfetti() {
     confettiActive = false;
     if (animFrameId) {
       cancelAnimationFrame(animFrameId);
@@ -195,41 +195,41 @@
     confettiPieces = [];
   }
 
-  function onResize () {
+  function onResize() {
     const canvas = document.getElementById('ee-canvas');
     if (!canvas) return;
-    canvas.width  = window.innerWidth;
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   }
 
-  function createPiece (W, H, initial) {
-    const size  = 8 + Math.random() * 10;
+  function createPiece(W, H, initial) {
+    const size = 8 + Math.random() * 10;
     return {
-      x:       Math.random() * W,
-      y:       initial ? (Math.random() * -H * 0.5) : (-size - Math.random() * 80),
-      w:       size,
-      h:       size * (0.3 + Math.random() * 0.5),
-      color:   CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
-      speed:   2.5 + Math.random() * 3.5,
-      angle:   Math.random() * Math.PI * 2,
-      spin:    (Math.random() - 0.5) * 0.18,
-      drift:   (Math.random() - 0.5) * 1.2,
+      x: Math.random() * W,
+      y: initial ? (Math.random() * -H * 0.5) : (-size - Math.random() * 80),
+      w: size,
+      h: size * (0.3 + Math.random() * 0.5),
+      color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+      speed: 2.5 + Math.random() * 3.5,
+      angle: Math.random() * Math.PI * 2,
+      spin: (Math.random() - 0.5) * 0.18,
+      drift: (Math.random() - 0.5) * 1.2,
       opacity: 0.75 + Math.random() * 0.25,
     };
   }
 
-  function tickConfetti () {
+  function tickConfetti() {
     const canvas = document.getElementById('ee-canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
-    const W   = canvas.width;
-    const H   = canvas.height;
+    const W = canvas.width;
+    const H = canvas.height;
 
     ctx.clearRect(0, 0, W, H);
 
     confettiPieces.forEach(function (p, idx) {
-      p.y     += p.speed;
-      p.x     += p.drift;
+      p.y += p.speed;
+      p.x += p.drift;
       p.angle += p.spin;
 
       // Recicla quando sai da tela
@@ -261,7 +261,7 @@
   // ─────────────────────────────────────────────────────────────────
   // 5. Init
   // ─────────────────────────────────────────────────────────────────
-  function init () {
+  function init() {
     injectModal();
   }
 
