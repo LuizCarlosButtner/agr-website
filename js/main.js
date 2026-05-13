@@ -287,12 +287,12 @@ $(document).ready(function ($) {
 const videoData = [
   {
     id: 1,
-    title: "Bebeto 07 e Zico",
+    title: "Ingrid Guimarães conta tudo sobre a carreira e os bastidores de Minha Irmã e Eu",
     category: "Videocast",
-    description: "Bebeto 07 e Zico. Um bate-papo histórico gravado com a máxima qualidade nos nossos estúdios na Barra da Tijuca.",
-    thumbnail: "https://i.ytimg.com/vi/MXZyq5eeeGA/hq720.jpg",
-    youtubeId: "MXZyq5eeeGA",
-    startTime: 5563
+    description: "O Traz a Pipoca de hoje está especialíssimo! Bruna Scot e Moisés Liporage batem um papo divertido com a diva da comédia nacional Ingrid Guimarães. Ela conta sobre os bastidores de Minha Irmã e Eu, seu novo filme, e também relembra momentos marcantes da carreira, como o lançamento de De Pernas pro Ar.\n\nSobre a parceria com Tatá Werneck, Ingrid também fala das diferentes gerações de comediantes e como é o desafio de lidar com cada maneira de atuar nas gravações. A atriz relembra seu começo no teatro (com Confissões de Adolescente até o sucesso estrondoso de Cócegas), e, claro, como foi abrir caminhos e se estabelecer como uma referência no cinema brasileiro.",
+    thumbnail: "https://i.ytimg.com/vi/IHeq0gi2CMs/hq720.jpg",
+    youtubeId: "IHeq0gi2CMs",
+    startTime: 0
   },
   {
     id: 2,
@@ -345,8 +345,8 @@ let currentSelectedVideo = null;
 let isSummarizing = false;
 
 const callGeminiAPI = async (prompt) => {
-  const apiKey = ""; // A chave API do Gemini vai aqui
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+  // A chave API está configurada no js/contact-form.js junto com as configurações de e-mail
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
   const payload = {
     contents: [{ parts: [{ text: prompt }] }],

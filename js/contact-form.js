@@ -7,6 +7,10 @@ const WEB3FORMS_ACCESS_KEY = 'ac96daf9-a415-4472-9ac5-3e4f3404b2d2';
 const WEB3FORMS_FROM_NAME  = 'AGR Podcast Estúdios — Site';
 const WEB3FORMS_SUBJECT    = 'Nova mensagem pelo site AGR';
 
+// Configuração da API do Gemini (IA para Resumos dos Vídeos)
+// Insira a sua chave gerada no Google AI Studio aqui:
+const GEMINI_API_KEY = '';
+
 // Helpers de visibilidade (corrige conflito entre inline style e CSS class)
 function showEl(el)  { el.style.display = 'block'; }
 function hideEl(el)  { el.style.display = 'none';  }
