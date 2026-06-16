@@ -290,9 +290,9 @@ const videoData = [
     title: "Ingrid Guimarães conta tudo sobre a carreira e os bastidores de Minha Irmã e Eu",
     category: "Videocast",
     description: "O Traz a Pipoca de hoje está especialíssimo! Bruna Scot e Moisés Liporage batem um papo divertido com a diva da comédia nacional Ingrid Guimarães. Ela conta sobre os bastidores de Minha Irmã e Eu, seu novo filme, e também relembra momentos marcantes da carreira, como o lançamento de De Pernas pro Ar.\n\nSobre a parceria com Tatá Werneck, Ingrid também fala das diferentes gerações de comediantes e como é o desafio de lidar com cada maneira de atuar nas gravações. A atriz relembra seu começo no teatro (com Confissões de Adolescente até o sucesso estrondoso de Cócegas), e, claro, como foi abrir caminhos e se estabelecer como uma referência no cinema brasileiro.",
-    thumbnail: "https://i.ytimg.com/vi/IHeq0gi2CMs/hq720.jpg",
-    youtubeId: "IHeq0gi2CMs",
-    startTime: 0
+    thumbnail: "https://i.ytimg.com/vi/lPGZLKGAfZo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoIQpJ4b0cCTXquIiSlUAJkFlQow",
+    youtubeId: "lPGZLKGAfZo",
+    startTime: 180
   },
   {
     id: 2,
