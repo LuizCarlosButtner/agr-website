@@ -145,11 +145,6 @@ $(document).ready(function ($) {
 
   // Move to specific section when click on menu link
   link.on('click', function (e) {
-    // Ignora o clique se for na plaquinha de texto (span)
-    if (e.target.tagName.toLowerCase() === 'span') {
-      e.preventDefault();
-      return;
-    }
     var target = $($(this).attr('href'));
     $('html, body').animate({
       scrollTop: target.offset().top
